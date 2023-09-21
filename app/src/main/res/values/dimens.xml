@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 用于定义 Android 应用中使用的尺寸和距离。这些值可以是边距、高度、宽度等等。这样做的好处是可以在一个地方统一管理这些尺寸值，使得代码更加整洁，也方便进行修改。 -->
+    <!--
+    Because the window insets on round devices are larger than 15dp, this padding only applies
+    to square screens.
+    -->
+    <dimen name="box_inset_layout_padding">0dp</dimen>
+
+    <!--
+    This padding applies to both square and round screens. The total padding between the buttons
+    and the window insets is box_inset_layout_padding (above variable) on square screens and
+    inner_frame_layout_padding (below variable) on round screens.
+    -->
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="screen_margin">16dp</dimen>
+
+    <!-- Default list item margin -->
+    <dimen name="list_item_margin">8dp</dimen>
+    <!-- Default button height -->
+    <dimen name="button_height">48dp</dimen>
+    <!--    top margin-->
+    <dimen name="list_item_margin_top">16dp</dimen>
+    <!--    bottom margin-->
+    <dimen name="list_item_margin_bottom">16dp</dimen>
+    <!--    left margin-->
+    <dimen name="list_item_margin_left">16dp</dimen>
+    <!--    right margin-->
+    <dimen name="list_item_margin_right">16dp</dimen>
+</resources>

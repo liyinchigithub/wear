@@ -1,0 +1,5 @@
+<resources>
+    <string name="hello_world">Hello Round World!</string>
+    <string name="app_name">Round World</string>
+    <string name="button_text_login">登录</string>
+</resources>
