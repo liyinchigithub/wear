@@ -41,4 +41,5 @@ public class ButtonAdapter extends RecyclerView.Adapter<ButtonAdapter.ViewHolder
             mButton = button;
         }
     }
+
 }

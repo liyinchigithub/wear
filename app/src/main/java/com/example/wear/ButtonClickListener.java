@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 // 按钮点击事件监听
 public class ButtonClickListener implements RecyclerView.OnItemTouchListener {
     public ButtonClickListener(SecondActivity secondActivity) {
+        // 写一个显示toast
+        secondActivity.showToast("点击了登录按钮");
 
     }
 

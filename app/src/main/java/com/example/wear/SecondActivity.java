@@ -2,7 +2,9 @@ package com.example.wear;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,5 +36,9 @@ public class SecondActivity extends Activity {
         // 设置列表背景颜色
         recyclerView.setBackgroundResource(R.drawable.button_background);
 //        mTextView = binding.text;
+    }
+
+    public void showToast(String text) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
 }

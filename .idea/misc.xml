@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/button_layout.xml" value="0.225" />
       </map>
     </option>
   </component>
