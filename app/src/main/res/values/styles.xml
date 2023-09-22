@@ -1,5 +1,5 @@
 <resources>
-
+    <!--    这些资源文件都是XML格式的，可以通过R类在代码中引用-->
     <style name="ButtonStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

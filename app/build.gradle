@@ -1,31 +1,56 @@
+// 构建配置锁应用的插件，它提供了编译Android应用所需的所有功能
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
+//这个块定义了Android构建配置
 android {
-    compileSdk 33
+    compileSdk 33   // 指定编译SDK版本，即项目编译的目标Android SDK版本
 
+    // 构建工具版本
     defaultConfig {
-        applicationId "com.example.wear"
-        minSdk 30
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        applicationId "com.example.wear"// 指定应用的包名
+        minSdk 30   // 指定应用的最小支持的Android SDK版本
+        targetSdk 33 // 指定应用的目标Android SDK版本
+        versionCode 1   // 指定应用的版本号
+        versionName "1.0" // 指定应用的版本名称
+//        buildToolsRevision '30.0.3' // 指定构建工具版本
 
     }
-
+    // 项目的构建类型
     buildTypes {
+        // debug构建类型
+        debug {
+            // 是否开启调试模式
+            debuggable true
+            // 是否开启zip对齐
+            zipAlignEnabled true
+            // 是否开启混淆
+            minifyEnabled false
+            // 指定混淆规则文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        // release构建类型
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    // 项目的签名配置
+    signingConfigs {
+        release
+        debug
+    }
+
+    // 项目的构建配置
     buildFeatures {
         viewBinding true
     }
 }
-
+// 项目的依赖。
+// 这些依赖包括你的项目需要的所有库，如Android支持库、测试库等。
+// 例如，implementation 'androidx.appcompat:appcompat:1.1.0'表示你的项目依赖于appcompat库的1.1.0版本
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.6.0'

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    这些资源文件都是XML格式的，可以通过R类在代码中引用-->
+    <string name="app_name">Touchless</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title">登录</string>
+
+    <string-array name="items">
+        <item>登录</item>
+        <item>隐藏图片</item>
+        <item>退出</item>
+    </string-array>
+
+    <string-array name="items2">
+        <item>登录</item>
+        <item>退出</item>
+    </string-array>
+
+    <string-array name="items3">
+        <item>隐藏图片</item>
+        <item>退出</item>
+    </string-array>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_hide_image">HideImageActivity</string>
+    <string name="title_activity_exit">ExitActivity</string>
+    <string name="title_activity_login_success">LoginSuccessActivity</string>
+    <string name="title_activity_hide_image_success">HideImageSuccessActivity</string>
+    <string name="title_activity_exit_success">ExitSuccessActivity</string>
+    <string name="title_activity_login_fail">LoginFailActivity</string>
+    <string name="title_activity_hide_image_fail">HideImageFailActivity</string>
+    <string name="title_activity_exit_fail">ExitFailActivity</string>
+</resources>

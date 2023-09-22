@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 用于定义 Android 应用中使用的尺寸和距离。这些值可以是边距、高度、宽度等等。这样做的好处是可以在一个地方统一管理这些尺寸值，使得代码更加整洁，也方便进行修改。 -->
+    <!--    这些资源文件都是XML格式的，可以通过R类在代码中引用-->
+    <!-- 用于定义 Android 应用中使用的尺寸和距离。
+    这些值可以是边距、高度、宽度等等。
+    这样做的好处是可以在一个地方统一管理这些尺寸值，使得代码更加整洁，也方便进行修改。 -->
     <!--
     Because the window insets on round devices are larger than 15dp, this padding only applies
     to square screens.
@@ -20,7 +23,7 @@
     <!-- Default list item margin -->
     <dimen name="list_item_margin">8dp</dimen>
     <!-- Default button height -->
-    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_height">28dp</dimen>
     <!--    top margin-->
     <dimen name="list_item_margin_top">16dp</dimen>
     <!--    bottom margin-->

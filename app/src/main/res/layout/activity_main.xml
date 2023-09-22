@@ -19,8 +19,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <!-- 写一个标题 -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/title"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
             <!-- 写一个账号输入框-->
-
             <EditText
                 android:id="@+id/account"
                 android:layout_width="match_parent"
