@@ -2,7 +2,6 @@ package com.example.wear;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +28,7 @@ public class SecondActivity extends Activity {
         // 设置布局管理器
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // 设置适配器
-        recyclerView.setAdapter(new ButtonAdapter(new String[] {"Button1", "Button2", "Button3", "Button4"}));
+        recyclerView.setAdapter(new SecondActivityButtonAdapter(new String[] {"Button1", "Button2", "Button3", "Button4"}));
         // 设置适配其中每个按钮点击事件
         recyclerView.addOnItemTouchListener(new ButtonClickListener(this));
 

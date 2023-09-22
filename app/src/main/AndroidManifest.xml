@@ -24,13 +24,14 @@
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
-        <!-- MainActivity-->
+        <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -41,13 +42,21 @@
             android:label="@string/title_activity_second">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 声明 SecondActivity -->
+        <activity
+            android:name=".ThirdActivity"
+            android:exported="true"
+            android:label="@string/title_activity_third">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <service
             android:name=".MyWatchFace"
             android:exported="true"

@@ -13,5 +13,6 @@
     <string name="button_text_login">登录</string>
     <string name="button_text_hide">隐藏图片</string>
     <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_third">ThirdActivity</string>
 
 </resources>
