@@ -65,6 +65,12 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                     Intent intent = new Intent(v.getContext(), FourthActivity.class);// v.getContext() 获取父布局的上下文 也就是 SecondActivity
                     v.getContext().startActivity(intent);
                 }
+                // 判断是否点击第五个按钮
+                if (position == 4) {
+                    // 如果点击了第五个按钮，第二页跳转到第五个页面 通过 Intent 对象实现
+                    Intent intent = new Intent(v.getContext(), FifthActivity.class);// v.getContext() 获取父布局的上下文 也就是 SecondActivity
+                    v.getContext().startActivity(intent);
+                }
             }
         });
     }

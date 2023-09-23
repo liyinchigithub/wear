@@ -28,7 +28,7 @@ public class SecondActivity extends Activity {
         // 设置布局管理器
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // 设置适配器 用于显示按钮
-        recyclerView.setAdapter(new SecondActivityButtonAdapter(new String[] {"Button1", "Button2", "Button3", "Button4"}));
+        recyclerView.setAdapter(new SecondActivityButtonAdapter(new String[] {"返回", "Button1", "定位", "通知" ,"唤起语音输入", "Button6"}));
         // 添加按钮点击监听器
         recyclerView.addOnItemTouchListener(new ButtonClickListener(this));
 

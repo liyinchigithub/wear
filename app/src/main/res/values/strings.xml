@@ -15,6 +15,7 @@
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_fourth">FourthActivity</string>
+    <string name="title_activity_fifth">activity_fifth</string>
 
 
 </resources>

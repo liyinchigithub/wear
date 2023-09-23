@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wear">
 
-    <uses-feature android:name="android.hardware.type.watch" />
-    <!--    权限-->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Required for complications to receive complication data and open the provider chooser. -->
     <uses-permission android:name="com.google.android.wearable.permission.RECEIVE_COMPLICATION_DATA" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
@@ -38,8 +39,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- 声明 第二页 -->
+        </activity> <!-- 声明 第二页 -->
         <activity
             android:name=".SecondActivity"
             android:exported="true"
@@ -49,8 +49,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- 声明 第三页 -->
+        </activity> <!-- 声明 第三页 -->
         <activity
             android:name=".ThirdActivity"
             android:exported="true"
@@ -73,6 +72,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 声明 第五页 -->
+        <activity
+            android:name=".FifthActivity"
+            android:exported="true"
+            android:label="@string/title_activity_fifth">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <service
             android:name=".MyWatchFace"
             android:exported="true"

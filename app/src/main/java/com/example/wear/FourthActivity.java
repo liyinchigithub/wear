@@ -45,10 +45,11 @@ public class FourthActivity extends Activity {
 
         // 创建一个Intent，指向你想要用户跳转到的Activity
         Intent intent = new Intent(this, SecondActivity.class);
+        // 创建一个PendingIntent，用于在用户点击通知时触发一个特定的操作
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        // FLAG_ACTIVITY_NEW_TASK：如果设置了这个标志，那么这个 Activity 将会在一个新的任务栈中启动。如果没有设置这个标志，那么这个 Activity 将会在当前任务栈中启动。
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
-
-
+        // 创建一个通知
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 // 设置通知小图标
                 .setSmallIcon(R.drawable.notification_icon)
@@ -63,7 +64,6 @@ public class FourthActivity extends Activity {
                 // 设置通知优先级
                 .setPriority(NotificationCompat.PRIORITY_MAX);// PRIORITY_HIGH 、PRIORITY_DEFAULT 、PRIORITY_MAX
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-
         // notificationId is a unique int for each notification that you must define
         notificationManager.notify(NOTIFICATION_ID, builder.build());
     }
