@@ -23,19 +23,20 @@ public class SecondActivity extends Activity {
         binding = ActivitySecondBinding.inflate(getLayoutInflater());
         // setContentView 方法设置了 Activity 的布局
         setContentView(binding.getRoot());
-        // 找到 RecyclerView
+        // 找到 RecyclerView 对象
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         // 设置布局管理器
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        // 设置适配器
+        // 设置适配器 用于显示按钮
         recyclerView.setAdapter(new SecondActivityButtonAdapter(new String[] {"Button1", "Button2", "Button3", "Button4"}));
-        // 设置适配其中每个按钮点击事件
+        // 添加按钮点击监听器
         recyclerView.addOnItemTouchListener(new ButtonClickListener(this));
 
         // 设置列表背景颜色
         recyclerView.setBackgroundResource(R.drawable.button_background);
 //        mTextView = binding.text;
     }
+
 
     public void showToast(String text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();

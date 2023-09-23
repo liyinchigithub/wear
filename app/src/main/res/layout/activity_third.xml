@@ -15,10 +15,12 @@
         app:layout_boxedEdges="all">
 
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/title_activity_third"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="第三页" />
+            android:text="@string/title_activity_third"
+            android:textSize="20sp" />
+
 
     </FrameLayout>
 </androidx.wear.widget.BoxInsetLayout>
