@@ -47,12 +47,23 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 Log.d("SecondActivityButtonAdapter", "Clicked button at position: " + position);
                 // 显示一个 Toast 消息：
                 Toast.makeText(v.getContext(), "Clicked button at position: " + position, Toast.LENGTH_SHORT).show();
+                // 判断是否点击第一个按钮
+                if (position == 0) {
+                    // 如果点击了第一个按钮，第二页跳转到第一个页面 通过 Intent 对象实现
+                    Intent intent = new Intent(v.getContext(), MainActivity.class);// v.getContext() 获取父布局的上下文 也就是 SecondActivity
+                    v.getContext().startActivity(intent);
+                }
                 // 判断是否点击第三个按钮
                 if (position == 2) {
                     // 如果点击了第三个按钮，第二页跳转到第三个页面 通过 Intent 对象实现
                     Intent intent = new Intent(v.getContext(), ThirdActivity.class);// v.getContext() 获取父布局的上下文 也就是 SecondActivity
                     v.getContext().startActivity(intent);
-
+                }
+                // 判断是否点击第四个按钮
+                if (position == 3) {
+                    // 如果点击了第四个按钮，第二页跳转到第四个页面 通过 Intent 对象实现
+                    Intent intent = new Intent(v.getContext(), FourthActivity.class);// v.getContext() 获取父布局的上下文 也就是 SecondActivity
+                    v.getContext().startActivity(intent);
                 }
             }
         });

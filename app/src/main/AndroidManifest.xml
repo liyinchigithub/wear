@@ -2,11 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wear">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.type.watch" />
+    <!--    权限-->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-    <uses-feature android:name="android.hardware.type.watch" /> <!-- Required for complications to receive complication data and open the provider chooser. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Required for complications to receive complication data and open the provider chooser. -->
     <uses-permission android:name="com.google.android.wearable.permission.RECEIVE_COMPLICATION_DATA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -25,6 +26,8 @@
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
+
+
         <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
@@ -36,7 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- 声明 SecondActivity -->
+        <!-- 声明 第二页 -->
         <activity
             android:name=".SecondActivity"
             android:exported="true"
@@ -47,11 +50,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- 声明 SecondActivity -->
+        <!-- 声明 第三页 -->
         <activity
             android:name=".ThirdActivity"
             android:exported="true"
             android:label="@string/title_activity_third">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 声明 第四页 -->
+        <activity
+            android:name=".FourthActivity"
+            android:exported="true"
+            android:icon="@drawable/notification_icon">
+            android:label="@string/title_activity_fourth">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

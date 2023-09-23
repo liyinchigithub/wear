@@ -1,12 +1,18 @@
 package com.example.wear;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
+
 import androidx.core.app.ActivityCompat;
+
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -19,6 +25,7 @@ public class ThirdActivity extends Activity {
     private TextView mTextView;
     private ActivityThirdBinding binding;
     private FusedLocationProviderClient fusedLocationClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +37,38 @@ public class ThirdActivity extends Activity {
         //  设置文本
         mTextView.setText("Third Activity");
 
-        // 获取位置信息
+        // 【获取位置信息】
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         // 检查是否有权限 如果没有权限，请求权限
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{
-                    // manifest 中声明了权限，这里就要声明一下
-                    Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            // 创建一个 AlertDialog.Builder 对象
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            // 设置标题和消息
+            builder.setTitle("需要定位权限");
+            builder.setMessage("我们需要获取您的位置信息，以便为您提供更好的服务。");
+            // 设置确定按钮，当用户点击确定按钮时请求权限
+            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ActivityCompat.requestPermissions(ThirdActivity.this, new String[]{
+                            Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+                }
+            });
+            //
+            builder.setNeutralButton("取消", null);
+            // 创建对话框
+            AlertDialog dialog = builder.create();
+            // 显示对话框
+            dialog.show();
+            // 获取按钮样式
+            Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+            positiveButton.setTextSize(15);
+            // 显示按钮边框
+            positiveButton.setTextColor(Color.BLUE);
+            Button neutralButton = dialog.getButton(AlertDialog.BUTTON_NEUTRAL);
+            neutralButton.setTextSize(15);
+            // 显示按钮边框
+            neutralButton.setTextColor(Color.WHITE);
         } else {
             // 如果有权限，获取位置信息
             fusedLocationClient.getLastLocation()

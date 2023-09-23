@@ -14,6 +14,7 @@
     <string name="button_text_hide">隐藏图片</string>
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_activity_fourth">FourthActivity</string>
 
 
 </resources>
