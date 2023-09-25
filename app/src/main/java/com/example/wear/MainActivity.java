@@ -52,5 +52,15 @@ public class MainActivity extends Activity {
 
             }
         });
+
+        // 获取传递过来的 Bundle 对象
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            // 通过 Bundle 对象获取字符串数据
+            String text = bundle.getString("textSecondActivityToMainActivity1");
+            // 在这里，你可以使用 text 变量
+            // 例如，你可以显示一个 Toast 消息：
+            Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        }
     }
 }

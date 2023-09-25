@@ -16,6 +16,18 @@
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_fourth">FourthActivity</string>
     <string name="title_activity_fifth">activity_fifth</string>
+    <string name="title_activity_sixty">activity_sixty</string>
+    <string name="title_activity_seven">activity_seven</string>
+    <string name="title_activity_eight">activity_eight</string>
+    <string name="title_activity_nine">activity_nine</string>
+    <string name="title_activity_ten">activity_ten</string>
+    <string name="title_activity_eleven">activity_eleven</string>
+    <string name="title_activity_twelve">activity_twelve</string>
+    <string name="title_activity_thirteen">activity_thirteen</string>
+    <string name="title_activity_fourteen">activity_fourteen</string>
+    <string name="title_activity_fifteen">activity_fifteen</string>
+    <string name="title_activity_sixteen">activity_sixteen</string>
+    <string name="title_activity_seventeen">activity_seventeen</string>
 
 
 </resources>
