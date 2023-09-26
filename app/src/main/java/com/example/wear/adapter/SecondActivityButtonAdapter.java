@@ -16,9 +16,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wear.EighthActivity;
 import com.example.wear.FifthActivity;
 import com.example.wear.FourthActivity;
 import com.example.wear.MainActivity;
+import com.example.wear.SecondActivity;
+import com.example.wear.SevenActivity;
 import com.example.wear.SixthActivity;
 import com.example.wear.ThirdActivity;
 import com.example.wear.util.SensorService;
@@ -99,6 +102,12 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                     // 调用 startActivity 方法实现跳转
                     v.getContext().startActivity(intent);
                 }
+                // 判断是否点击第二个按钮
+                if (position == 1) {
+                    // 如果点击了第二个按钮，第二页跳转到第二个页面 通过 Intent 对象实现
+                    Intent intent = new Intent(v.getContext(), SecondActivity.class);// v.getContext() 获取父布局的上下文 也就是 SecondActivity
+                    v.getContext().startActivity(intent);
+                }
                 // 判断是否点击第三个按钮
                 if (position == 2) {
                     // 如果点击了第三个按钮，第二页跳转到第三个页面 通过 Intent 对象实现
@@ -158,14 +167,17 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
 
                 //  判断是否点击第九个按钮
                 if(position == 8){
-                    // 发起https请求
+                    // 跳转页面
+                    Intent intent = new Intent(v.getContext(), SevenActivity.class);
+                    v.getContext().startActivity(intent);
 
                 }
 
                 // 判断是否点击第十个按钮
                 if(position == 9){
-
-
+                    // 跳转页面
+                    Intent intent = new Intent(v.getContext(), EighthActivity.class);
+                    v.getContext().startActivity(intent);
 
                 }
 

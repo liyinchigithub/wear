@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.wear">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <uses-feature android:name="android.hardware.type.watch" />
-<!--    允许应用访问大概的位置信息，通常基于网络提供的位置信息（如WiFi和基站）-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<!--    允许应用接收来自Wearable API的复杂数据-->
-    <uses-permission android:name="com.google.android.wearable.permission.RECEIVE_COMPLICATION_DATA" />
-<!--    允许应用使用前台服务。前台服务是一种在用户当前交互的界面之外运行的服务，可以执行一些长时间运行的操作。-->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-<!--    允许应用访问网络，进行网络通信。-->
-    <uses-permission android:name="android.permission.INTERNET" />
-<!--    允许应用访问身体传感器，如心率传感器-->
-    <uses-permission android:name="android.permission.BODY_SENSORS" />
-<!--    允许应用在设备启动完成后接收一个广播-->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-<!--    允许应用读取设备外部存储（如SD卡）上的数据。-->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<!--    允许应用写入设备外部存储。-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<!--    允许应用访问电话状态，如：设备的电话号码，当前的网络类型，是否正在通话等。-->
+    <uses-feature android:name="android.hardware.type.watch" /> <!-- 允许应用访问大概的位置信息，通常基于网络提供的位置信息（如WiFi和基站） -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 允许应用接收来自Wearable API的复杂数据 -->
+    <uses-permission android:name="com.google.android.wearable.permission.RECEIVE_COMPLICATION_DATA" /> <!-- 允许应用使用前台服务。前台服务是一种在用户当前交互的界面之外运行的服务，可以执行一些长时间运行的操作。 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 允许应用访问网络，进行网络通信。 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许应用访问身体传感器，如心率传感器 -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" /> <!-- 允许应用在设备启动完成后接收一个广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 允许应用读取设备外部存储（如SD卡）上的数据。 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许应用写入设备外部存储。 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许应用访问电话状态，如：设备的电话号码，当前的网络类型，是否正在通话等。 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
@@ -33,7 +25,6 @@
         <uses-library
             android:name="com.google.android.wearable"
             android:required="true" />
-
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
@@ -41,85 +32,72 @@
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
-
         <!-- 数据共享 -->
         <provider
             android:name=".Provider.Provider"
             android:authorities="com.example.wear.Provider"
             android:enabled="true"
-            android:exported="false"></provider> <!-- MainActivity -->
+            android:exported="false" />
+        <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:exported="true"
             android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 声明 第二页 -->
+        </activity>
+        <!-- 声明 第二页 -->
         <activity
             android:name=".SecondActivity"
             android:exported="true"
             android:label="@string/title_activity_second">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- 声明 第三页 -->
+        </activity>
+        <!-- 声明 第三页 -->
         <activity
             android:name=".ThirdActivity"
             android:exported="true"
             android:label="@string/title_activity_third">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- 声明 第四页 -->
+        </activity>
+        <!-- 声明 第四页 -->
         <activity
             android:name=".FourthActivity"
             android:exported="true"
-            android:icon="@drawable/notification_icon">
+            android:icon="@drawable/notification_icon"
             android:label="@string/title_activity_fourth">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- 声明 第五页 -->
+        </activity>
+        <!-- 声明 第五页 -->
         <activity
             android:name=".FifthActivity"
             android:exported="true"
             android:label="@string/title_activity_fifth">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- 声明 第六页 -->
+        </activity>
+        <!-- 声明 第六页 -->
         <activity
             android:name=".SixthActivity"
             android:exported="true"
             android:label="@string/title_activity_sixty">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!-- 声明 第七页 -->
         <activity
             android:name=".SevenActivity"
             android:exported="true"
             android:label="@string/title_activity_seven">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <!-- 声明 第八页 -->
+        <activity
+            android:name=".EighthActivity"
+            android:exported="true"
+            android:label="@string/title_activity_eighth">
+        </activity>
+        <!-- 服务组件-->
+        <service android:name=".util.NetworkService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="NetworkService">
+        </service>
 
         <service
             android:name=".MyWatchFace"
@@ -150,7 +128,6 @@
 
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
-
                 <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
             </intent-filter>
         </service>

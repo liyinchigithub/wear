@@ -8,17 +8,59 @@
     tools:context=".SevenActivity"
     tools:deviceIds="wear">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding"
-        app:layout_boxedEdges="all">
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <!-- 标题 -->
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hello_world" />
+            android:layout_gravity="center"
+            android:text="@string/seven_title"
+            android:color="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    </FrameLayout>
+        <!-- 第二行 -->
+        <!-- 内容说明 -->
+        <LinearLayout
+            android:id="@+id/ll_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+            <!-- 图标 -->
+            <ImageView
+                android:id="@+id/image_wifi"
+                android:layout_width="38dp"
+                android:layout_height="42dp"
+                android:width="14sp"
+                android:height="14sp"
+                android:src="@drawable/ic_wifi" />
+             <!-- 文本 -->
+            <TextView
+                android:id="@+id/text_wifi"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="开启关闭"
+                android:textSize="18sp" />
+            <!-- 开关按钮 -->
+            <Switch
+                android:id="@+id/switch_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="开启或关闭wifi功能"
+            android:textSize="20sp" />
+    </LinearLayout>
 </androidx.wear.widget.BoxInsetLayout>
