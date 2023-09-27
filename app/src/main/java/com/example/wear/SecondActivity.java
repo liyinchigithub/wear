@@ -35,7 +35,7 @@ public class SecondActivity extends Activity {
         recyclerView.addOnItemTouchListener(new ButtonClickListener(this));
 
         // 设置列表背景颜色
-        recyclerView.setBackgroundResource(R.drawable.button_background);
+        recyclerView.setBackgroundResource(R.drawable.list_background);
 //        mTextView = binding.text;
     }
 

@@ -24,17 +24,22 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="@string/title"
-                android:textColor="@color/white"
-                android:textSize="10sp"
-                android:textStyle="bold" />
+                android:textColor="@color/colorPrimary"
+                android:gravity="left"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                />
             <!-- 写一个账号输入框-->
             <EditText
                 android:id="@+id/account"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="账号" />
+                android:hint="账号"
+                android:focusableInTouchMode="true"
+                />
             <!--        写一个密码输入框-->
             <EditText
                 android:id="@+id/password"
@@ -49,10 +54,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="@string/button_text_login" />
+            <FrameLayout
+                android:id="@+id/fragment_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
         </LinearLayout>
 
 
