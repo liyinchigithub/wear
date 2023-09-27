@@ -30,4 +30,6 @@
     <string name="title_activity_sixteen">activity_sixteen</string>
     <string name="title_activity_seventeen">activity_seventeen</string>
     <string name="title_activity_eighth">activity_eighth</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment">Hello blank fragment</string>
 </resources>

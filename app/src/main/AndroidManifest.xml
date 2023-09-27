@@ -41,6 +41,7 @@
         <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTask"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:exported="true"
             android:label="@string/title_activity_main">
@@ -52,18 +53,21 @@
         <!-- 声明 第二页 -->
         <activity
             android:name=".SecondActivity"
+            android:launchMode="singleTask"
             android:exported="true"
             android:label="@string/title_activity_second">
         </activity>
         <!-- 声明 第三页 -->
         <activity
             android:name=".ThirdActivity"
+            android:launchMode="singleTask"
             android:exported="true"
             android:label="@string/title_activity_third">
         </activity>
         <!-- 声明 第四页 -->
         <activity
             android:name=".FourthActivity"
+            android:launchMode="singleTask"
             android:exported="true"
             android:icon="@drawable/notification_icon"
             android:label="@string/title_activity_fourth">
@@ -71,24 +75,28 @@
         <!-- 声明 第五页 -->
         <activity
             android:name=".FifthActivity"
+            android:launchMode="singleTask"
             android:exported="true"
             android:label="@string/title_activity_fifth">
         </activity>
         <!-- 声明 第六页 -->
         <activity
             android:name=".SixthActivity"
+            android:launchMode="singleTask"
             android:exported="true"
             android:label="@string/title_activity_sixty">
         </activity>
         <!-- 声明 第七页 -->
         <activity
             android:name=".SevenActivity"
+            android:launchMode="singleTask"
             android:exported="true"
             android:label="@string/title_activity_seven">
         </activity>
         <!-- 声明 第八页 -->
         <activity
             android:name=".EighthActivity"
+            android:launchMode="singleTask"
             android:exported="true"
             android:label="@string/title_activity_eighth">
         </activity>
@@ -125,7 +133,6 @@
             <meta-data
                 android:name="com.google.android.wearable.watchface.preview_circular"
                 android:resource="@drawable/preview_analog" />
-
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
                 <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
