@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity { // AppCompatActivity 是 A
     private ActivityMainBinding binding;
     // 用于显示按钮
     private Button loginButton;
+    // 账号输入框
+    private EditText  account;
+    // 密码输入框
+    private EditText  password;
 
     // 当 Activity 被创建时，这个方法会被调用
     @Override
@@ -72,12 +76,6 @@ public class MainActivity extends AppCompatActivity { // AppCompatActivity 是 A
     @Override
     protected void onStart() {
         super.onStart();
-        // 初始化mTextView 对象。
-        // mTextView = binding.text;
-        // 初始化-账号输入框对象
-        binding.account.setText("");// 通过 binding 对象找到activity_main.xml中 account 对象，然后调用 setText 方法设置文本
-        // 初始化-密码输入框对象
-        binding.password.setText("");
 
     }
 
@@ -87,19 +85,19 @@ public class MainActivity extends AppCompatActivity { // AppCompatActivity 是 A
     @Override
     protected void onResume() {
         super.onResume();
-
+        // 账号输入框
+        account=findViewById(R.id.account);
+        // 密码输入框
+        password=findViewById(R.id.password);
         // 登录按钮
-        Button loginButton = findViewById(R.id.button_text_login);// 找到布局文件布局activity_main.xml 中的 button_text_login 对象
+        loginButton = findViewById(R.id.button_text_login);// 找到布局文件布局activity_main.xml 中的 button_text_login 对象
         // 点击事件监听器
         loginButton.setOnClickListener(new View.OnClickListener() {
             // 这里是点击按钮时要执行的代码
             @Override
             public void onClick(View v) {
-                // 获取账号输入框的值
-                String account = ((EditText) findViewById(R.id.account)).getText().toString();
-                String password = ((EditText) findViewById(R.id.password)).getText().toString();
                 // 判断账号密码输入框的值
-                if ("123".equals(account) && password.equals("456")) {
+                if ("123".equals(account.getText().toString()) && password.getText().toString().equals("456")) {
                     // 创建一个 Intent 对象，用于跳转到 SecondActivity
                     Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                     // 创建一个 Bundle 对象，用于传递数据
@@ -112,12 +110,14 @@ public class MainActivity extends AppCompatActivity { // AppCompatActivity 是 A
                     intent.putExtras(bundle);
                     // 跳转到 SecondActivity
                     startActivity(intent);
+
                 } else {
                     // 显示 Toast 消息
                     Toast.makeText(MainActivity.this, "账号或密码错误", Toast.LENGTH_SHORT).show();
                     // 日志输出输入框的值
                     Log.d("MainActivity", "账号：" + account + "密码：" + password);
                 }
+
             }
         });
 
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity { // AppCompatActivity 是 A
                 // 显示 Toast 消息
                 Toast.makeText(MainActivity.this, "长按登录按钮", Toast.LENGTH_SHORT).show();
                 Log.d("MainActivity", "长按登录按钮");
-                return false;
+                return true;
             }
         });
 
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity { // AppCompatActivity 是 A
                 Toast.makeText(MainActivity.this, "触摸登录按钮", Toast.LENGTH_SHORT).show();
                 Log.d("MainActivity", "触摸登录按钮");
                 Log.d("MainActivity", "触摸事件：" + event.getAction());
-                return true;
+                return false;
             }
         });
         // 获取传递过来的 Bundle 对象

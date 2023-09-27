@@ -37,7 +37,9 @@
                 android:id="@+id/account"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
                 android:hint="账号"
+                android:inputType="number"
                 android:focusableInTouchMode="true"
                 />
             <!--        写一个密码输入框-->
