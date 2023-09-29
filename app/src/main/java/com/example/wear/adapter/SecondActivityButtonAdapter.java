@@ -17,12 +17,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wear.EighthActivity;
+import com.example.wear.ElevenActivity;
 import com.example.wear.FifthActivity;
 import com.example.wear.FourthActivity;
 import com.example.wear.MainActivity;
+import com.example.wear.NineActivity;
 import com.example.wear.SecondActivity;
 import com.example.wear.SevenActivity;
 import com.example.wear.SixthActivity;
+import com.example.wear.TenActivity;
 import com.example.wear.ThirdActivity;
 import com.example.wear.util.SensorService;
 import com.example.wear.util.StepService;
@@ -31,32 +34,29 @@ import com.example.wear.util.WeatherService;
 /** 按钮适配器
  * 
  * 
- * 在Android开发中，Adapter（适配器）是一种设计模式，用于将数据和用户界面组件进行绑定，以便在用户界面中显示数据。
+ * 在Android开发中，Adapter（适配器）是一种设计模式，用于将"数据"和"用户界面组件"进行绑定，以便在用户界面中显示数据。
  *
  * Adapter主要用于将数据源（如数组、列表、数据库等）中的数据适配到用户界面的视图组件（如ListView、RecyclerView等）上。
-
-    在你提供的代码中，SecondActivityButtonAdapter是一个RecyclerView的适配器。
-
-    它的主要作用是将按钮的数据源（mButtonNames）适配到RecyclerView的每个item上。
-
-    具体来说，适配器的功能包括：
-
-    1. 创建ViewHolder：通过实现onCreateViewHolder方法，适配器创建并返回一个ViewHolder对象，用于保存每个item的视图组件。
-
-    2. 绑定数据到视图：通过实现onBindViewHolder方法，适配器将数据源中的数据绑定到ViewHolder中的视图组件上。
-
-        在这个方法中，可以根据position参数确定当前item的位置，并根据位置获取对应的数据。
-
-    3. 获取数据数量：通过实现getItemCount方法，适配器返回数据源中的数据数量，用于确定RecyclerView需要显示多少个item。
-
-    适配器的作用是将数据和视图进行连接，使得数据能够在用户界面中以适当的方式显示出来。通过适配器，可以实现数据的动态更新、点击事件的处理等功能，从而提供更好的用户体验。
+ * 在你提供的代码中，SecondActivityButtonAdapter是一个RecyclerView的适配器。
+ * 它的主要作用是将按钮的数据源（mButtonNames）适配到RecyclerView的每个item上。
+ * 具体来说，适配器的功能包括：
+ * 1. 创建ViewHolder：
+ *      通过实现onCreateViewHolder方法，适配器创建并返回一个ViewHolder对象，用于保存每个item的视图组件。
+ * 2. 绑定数据到视图：
+ *      通过实现onBindViewHolder方法，适配器将数据源中的数据绑定到ViewHolder中的视图组件上。
+ *      在这个方法中，可以根据position参数确定当前item的位置，并根据位置获取对应的数据。
+ * 3. 获取数据数量：
+ *      通过实现getItemCount方法，适配器返回数据源中的数据数量，用于确定RecyclerView需要显示多少个item。
+ *      适配器的作用是将数据和视图进行连接，使得数据能够在用户界面中以适当的方式显示出来。
+ *      通过适配器，可以实现数据的动态更新、点击事件的处理等功能，从而提供更好的用户体验。
 
 */
 public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActivityButtonAdapter.ViewHolder> {
-    // 声明按钮字符串数组
+    // 按钮字符串数组
     private String[] mButtonNames;
-    // 构造函数 初始化按钮字符串数组
+    // 构造函数
     public SecondActivityButtonAdapter(String[] buttonNames) {
+        // 传入按钮字符串数组
         mButtonNames = buttonNames;
     }
     // 创建 ViewHolder用于保存每个按钮
@@ -105,7 +105,7 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 // 判断是否点击第二个按钮
                 if (position == 1) {
                     // 如果点击了第二个按钮，第二页跳转到第二个页面 通过 Intent 对象实现
-                    Intent intent = new Intent(v.getContext(), SecondActivity.class);// v.getContext() 获取父布局的上下文 也就是 SecondActivity
+                    Intent intent = new Intent(v.getContext(), NineActivity.class);// v.getContext() 获取父布局的上下文 也就是 SecondActivity
                     v.getContext().startActivity(intent);
                 }
                 // 判断是否点击第三个按钮
@@ -183,47 +183,31 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
 
                 // 判断是否点击第十一个按钮
                 if(position == 10){
-                    // 获取联系人
-                    // 创建 Intent 对象
-                    Intent intent = new Intent(Intent.ACTION_PICK);
-                    // 设置 Intent 对象的类型
-                    intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
-                    // 调用 startActivityForResult 方法发起请求
-                    ((Activity) v.getContext()).startActivityForResult(intent, 1);
-
-
-//                    // 存储联系人
-//                    // 创建 Intent 对象
-//                    Intent intent1 = new Intent(Intent.ACTION_INSERT);
-//                    // 设置 Intent 对象的类型
-//                    intent1.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
-//                    // 调用 startActivityForResult 方法发起请求
-//                    ((Activity) v.getContext()).startActivityForResult(intent1, 2);
+                    // 跳转页面
+                    Intent intent = new Intent(v.getContext(), TenActivity.class);
+                    v.getContext().startActivity(intent);
                 }
 
 
                 // 判断是否点击第十二个按钮
                 if(position == 11){
-                    //
+                    // 跳转页面
+                    Intent intent = new Intent(v.getContext(), TenActivity.class);
+                    v.getContext().startActivity(intent);
                 }
 
 
                 // 判断是否点击第十三个按钮
                 if(position == 12){
-                    // 获取天气
-                    // 创建 Intent 对象
-                    Intent intent = new Intent(v.getContext(), WeatherService.class);
-                    // 调用 startActivity 方法发起请求
+                    // 跳转页面
+                    Intent intent = new Intent(v.getContext(), ElevenActivity.class);
                     v.getContext().startActivity(intent);
-                    // 调用 startActivityForResult 方法发起请求
-                    ((Activity) v.getContext()).startActivityForResult(intent, 3);
-
                 }
                 // 判断是否点击第十四个按钮
                 if(position == 13){
-                    // 实例化WeatherActivity
-                    WeatherService weatherService = new WeatherService("");
-
+                    // 跳转页面
+                    Intent intent = new Intent(v.getContext(), ElevenActivity.class);
+                    v.getContext().startActivity(intent);
                 }
 
                 // 判断是否点击第十五个按钮

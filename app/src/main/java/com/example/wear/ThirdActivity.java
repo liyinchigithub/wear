@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 import android.Manifest;
@@ -36,7 +37,6 @@ public class ThirdActivity extends Activity {
         mTextView = binding.titleActivityThird;
         //  设置文本
         mTextView.setText("Third Activity");
-
         // 【获取位置信息】
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         // 检查是否有权限 如果没有权限，请求权限
@@ -52,9 +52,13 @@ public class ThirdActivity extends Activity {
                 public void onClick(DialogInterface dialog, int which) {
                     ActivityCompat.requestPermissions(ThirdActivity.this, new String[]{
                             Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+                    // 日志输出定位信息
+                    Log.d("ThirdActivity", "onClick: " + "请求权限");
+
                 }
+
             });
-            //
+            //  设置取消按钮
             builder.setNeutralButton("取消", null);
             // 创建对话框
             AlertDialog dialog = builder.create();
@@ -69,6 +73,8 @@ public class ThirdActivity extends Activity {
             neutralButton.setTextSize(15);
             // 显示按钮边框
             neutralButton.setTextColor(Color.WHITE);
+
+
         } else {
             // 如果有权限，获取位置信息
             fusedLocationClient.getLastLocation()

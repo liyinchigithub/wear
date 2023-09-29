@@ -7,13 +7,21 @@
     android:padding="@dimen/box_inset_layout_padding"
     tools:context=".SecondActivity"
     tools:deviceIds="wear">
-
-    <FrameLayout
+ <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+    android:scrollbarTrackVertical="@drawable/scrollbar_track"
+    android:fadeScrollbars="false"
+    android:scrollbarStyle="insideInset"
+    android:scrollbarSize="10dp"
+    android:fillViewport="true"
+    >
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding"
-        app:layout_boxedEdges="all">
-        <!--  写一个垂直可滚动的列表，有4个按钮-->
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
@@ -24,6 +32,6 @@
             android:layout_height="match_parent">
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    </FrameLayout>
+    </LinearLayout>
+</ScrollView>
 </androidx.wear.widget.BoxInsetLayout>

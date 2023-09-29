@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    滚动条的滑块样式-->
+    <solid android:color="@color/colorPrimary"/> <!-- 滑块的颜色 -->
+    <corners android:radius="5dp"/> <!-- 滑块的圆角大小 -->
+</shape>

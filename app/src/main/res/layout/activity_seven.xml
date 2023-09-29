@@ -41,7 +41,7 @@
                 android:width="14sp"
                 android:height="14sp"
                 android:src="@drawable/ic_wifi" />
-             <!-- 文本 -->
+            <!-- 文本 -->
             <TextView
                 android:id="@+id/text_wifi"
                 android:layout_width="48dp"
@@ -56,6 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp" />
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -7,17 +7,25 @@
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.14" />
         <entry key="app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/notification_icon.xml" value="0.1325" />
+        <entry key="app/src/main/res/drawable/scrollbar_dashed.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/scrollbar_thumb.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/scrollbar_track.xml" value="0.1" />
         <entry key="app/src/main/res/layout/FourthActivity.xml" value="0.121875" />
         <entry key="app/src/main/res/layout/activity_eighth.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/activity_eleven.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_fifth.xml" value="0.35174418604651164" />
         <entry key="app/src/main/res/layout/activity_fourth.xml" value="0.496875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.41875" />
+        <entry key="app/src/main/res/layout/activity_nine.xml" value="0.6564171122994652" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_seven.xml" value="0.484375" />
+        <entry key="app/src/main/res/layout/activity_ten.xml" value="0.4451871657754011" />
         <entry key="app/src/main/res/layout/activity_third.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/button_layout.xml" value="0.225" />
         <entry key="app/src/main/res/layout/fragment_one.xml" value="0.7296511627906976" />
+        <entry key="app/src/main/res/layout/scrollbar_thumb.xml" value="0.6564171122994652" />
+        <entry key="app/src/main/res/menu/top_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
