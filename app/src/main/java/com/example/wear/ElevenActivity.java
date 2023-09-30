@@ -8,8 +8,14 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wear.adapter.ElevenActivityButtonAdapter;
 import com.example.wear.databinding.ActivityElevenBinding;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ElevenActivity extends AppCompatActivity {
 
@@ -39,8 +45,15 @@ public class ElevenActivity extends AppCompatActivity {
                         finish();
                     }
                 });
-        // 监听
-
+        // 列表按钮
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        List<String> buttonList = new ArrayList<>();
+        buttonList.add("按钮1");
+        buttonList.add("按钮2");
+        buttonList.add("按钮3");
+        ElevenActivityButtonAdapter adapter = new ElevenActivityButtonAdapter(buttonList);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
     @Override
     public void onStart() {
