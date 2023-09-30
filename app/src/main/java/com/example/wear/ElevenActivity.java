@@ -8,12 +8,15 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import com.example.wear.databinding.ActivityElevenBinding;
 
 public class ElevenActivity extends AppCompatActivity {
 
     private ActivityElevenBinding binding;
     private Toolbar toolbar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +39,31 @@ public class ElevenActivity extends AppCompatActivity {
                         finish();
                     }
                 });
+        // 监听
+
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+    /**
+     * 底栏按钮
+     */
+    public void goToHomePage(View view) {
 
     }
 
+    /**
+     *
+     */
+    public void goToSecondPage(View view) {
 
+    }
 
+    /**
+     *
+     */
+    public void goToThirdPage(View view) {
 
+    }
 }

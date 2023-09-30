@@ -96,17 +96,22 @@
         <activity
             android:name=".TenActivity"
             android:exported="true"
-            android:label="@string/title_activity_ten"></activity>
-        <!-- 声明 第十一页 -->
+            android:label="@string/title_activity_ten" /> <!-- 声明 第十一页 -->
         <activity
             android:name=".ElevenActivity"
-            android:theme="@style/Theme.AppCompat"
             android:exported="true"
-            android:label="@string/title_activity_eleven">
+            android:label="@string/title_activity_eleven"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
         </activity>
-
+        <!-- 声明 第十二页 -->
+        <activity
+            android:name=".TwelveActivity"
+            android:exported="true"
+            android:label="@string/title_activity_twelve">
+        </activity>
+        <!-- 声明 第十三页 -->
         <!-- 服务组件 -->
-
         <service
             android:name=".util.NetworkService"
             android:enabled="true"

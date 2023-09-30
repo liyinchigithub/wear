@@ -25,7 +25,7 @@ public class SecondActivity extends Activity {
         binding = ActivitySecondBinding.inflate(getLayoutInflater());
         // setContentView 方法设置了 Activity 的布局
         setContentView(binding.getRoot());
-        // 找到 RecyclerView 对象
+        // 布局文件中找到 RecyclerView 对象
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         // 设置布局管理器
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -33,9 +33,8 @@ public class SecondActivity extends Activity {
         recyclerView.setAdapter(new SecondActivityButtonAdapter(new String[]{"返回0", "滚动条1", "定位2", "通知3", "唤起语音输入4", "数据同步5", "存储数据6", "获取数据7", "wifi开关", "音乐播放", "发送通知10", "请求11", "顶栏底栏", "获取系统信息13", "获取网络信息14", "心率15", "步数16"}));
         // 添加按钮点击监听器
         recyclerView.addOnItemTouchListener(new ButtonClickListener(this));
-
         // 设置列表背景颜色
-        recyclerView.setBackgroundResource(R.drawable.list_background);
+//        recyclerView.setBackgroundResource(R.drawable.list_background);
 //        mTextView = binding.text;
     }
 
