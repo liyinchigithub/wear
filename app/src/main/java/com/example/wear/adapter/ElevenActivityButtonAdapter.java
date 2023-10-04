@@ -1,11 +1,18 @@
 package com.example.wear.adapter;
 
+import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.wear.R;
 
@@ -17,54 +24,83 @@ import java.util.List;
 public class ElevenActivityButtonAdapter extends RecyclerView.Adapter<ElevenActivityButtonAdapter.ButtonViewHolder> {
 
     private List<String> buttonList;
+    private Context context;
 
-    public ElevenActivityButtonAdapter(List<String> buttonList) {
+
+    public ElevenActivityButtonAdapter(List<String> buttonList , Context context) {
         this.buttonList = buttonList;
+        this.context = context;
     }
 
+
+    /**
+     * onCreateViewHolder 用于创建ViewHolder
+     * */
     @NonNull
     @Override
     public ButtonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        Log.d("ButtonAdapter", "onCreateViewHolder");
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_button, parent, false);
         return new ButtonViewHolder(view);
     }
 
+    /**
+     * onBindViewHolder 绑定数据
+     * */
     @Override
-    public void onBindViewHolder(@NonNull ButtonViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ButtonViewHolder holder, @SuppressLint("RecyclerView") int position) {
         //  获取当前按钮的位置
         String buttonText = buttonList.get(position);
+        // 将数据绑定到button
         holder.button.setText(buttonText);//
 
-        holder.button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 根据按钮的位置或文本来确定点击了哪个按钮
-                if (position == 0) {
-                    // 点击了第一个按钮
-                    // 执行相应的操作
-                } else if (position == 1) {
-                    // 点击了第二个按钮
-                    // 执行相应的操作
-                } else if (position == 2) {
-                    // 点击了第三个按钮
-                    // 执行相应的操作
-                }
-            }
-        });
     }
 
-
+    /**
+     * getItemCount 显示多少个item
+     * */
     @Override
     public int getItemCount() {
-        return buttonList.size();
+        return buttonList==null?0:buttonList.size();
     }
+
 
     public static class ButtonViewHolder extends RecyclerView.ViewHolder {
         Button button;
 
         public ButtonViewHolder(@NonNull View itemView) {
             super(itemView);
+            //
             button = itemView.findViewById(R.id.button);
+            // 列表item点击事件监听
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // 执行相应的操作
+                    Log.d("ButtonAdapter", "点击了按钮");
+                    //
+                    if (onItemClickListener != null) {
+                        onItemClickListener.onItemClick(getAdapterPosition());
+                    }
+                }
+            });
         }
+    }
+
+    // 定义
+    private static
+    OnItemClickListener onItemClickListener;
+    //
+    public
+    void setOnItemClickListener(OnItemClickListener listener) {
+        this.onItemClickListener = listener;
+    }
+
+    /**
+     * 创建接口，用于实现列表item点击事件
+     * */
+    public interface OnItemClickListener {
+        //
+        void onItemClick(int position);
     }
 }

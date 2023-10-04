@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,10 +28,9 @@ public class ElevenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eleven);
-
-        toolbar = findViewById(R.id.toolbar);
-
-//        toolbar.setTitle("MyToolbar");//
+        // 顶栏
+        toolbar = findViewById(R.id.toolbar);//
+//        toolbar.setTitle("MyToolbar");// 设置
 //        toolbar.setSubtitle("子标题");
         toolbar.setLogo(R.drawable.ic_logo);
         toolbar.setBackground(getDrawable(R.color.colorPrimary));
@@ -47,13 +47,24 @@ public class ElevenActivity extends AppCompatActivity {
                 });
         // 列表按钮
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        List<String> buttonList = new ArrayList<>();
+        // 定义
+        ArrayList<String> buttonList = new ArrayList<>();
         buttonList.add("按钮1");
         buttonList.add("按钮2");
         buttonList.add("按钮3");
-        ElevenActivityButtonAdapter adapter = new ElevenActivityButtonAdapter(buttonList);
+        buttonList.add("按钮4");
+        // 适配器
+        ElevenActivityButtonAdapter adapter = new ElevenActivityButtonAdapter(buttonList, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //
+        adapter.setOnItemClickListener(new ElevenActivityButtonAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Toast.makeText(ElevenActivity.this, "你点击了" + position, Toast.LENGTH_SHORT).show();
+                Log.d("onItemClick", "onItemClick");
+            }
+        });
     }
     @Override
     public void onStart() {
