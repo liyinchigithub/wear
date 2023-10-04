@@ -1,18 +1,14 @@
 package com.example.wear.adapter;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.wear.R;
 
@@ -80,7 +76,7 @@ public class ElevenActivityButtonAdapter extends RecyclerView.Adapter<ElevenActi
                     Log.d("ButtonAdapter", "点击了按钮");
                     //
                     if (onItemClickListener != null) {
-                        onItemClickListener.onItemClick(getAdapterPosition());
+                        onItemClickListener.onItemClick(v, getAdapterPosition());
                     }
                 }
             });
@@ -101,6 +97,6 @@ public class ElevenActivityButtonAdapter extends RecyclerView.Adapter<ElevenActi
      * */
     public interface OnItemClickListener {
         //
-        void onItemClick(int position);
+        void onItemClick(View v, int position);
     }
 }
