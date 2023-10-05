@@ -24,6 +24,8 @@ import com.example.wear.SevenActivity;
 import com.example.wear.SixthActivity;
 import com.example.wear.TenActivity;
 import com.example.wear.ThirdActivity;
+import com.example.wear.ThirteenActivity;
+import com.example.wear.TwelveActivity;
 import com.example.wear.service.SensorService;
 import com.example.wear.service.StepService;
 
@@ -188,7 +190,7 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 // 判断是否点击第十二个按钮
                 if(position == 11){
                     // 跳转页面
-                    Intent intent = new Intent(v.getContext(), TenActivity.class);
+                    Intent intent = new Intent(v.getContext(), ElevenActivity.class);
                     v.getContext().startActivity(intent);
                 }
 
@@ -196,13 +198,13 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 // 判断是否点击第十三个按钮
                 if(position == 12){
                     // 跳转页面
-                    Intent intent = new Intent(v.getContext(), ElevenActivity.class);
+                    Intent intent = new Intent(v.getContext(), TwelveActivity.class);
                     v.getContext().startActivity(intent);
                 }
                 // 判断是否点击第十四个按钮
                 if(position == 13){
                     // 跳转页面
-                    Intent intent = new Intent(v.getContext(), ElevenActivity.class);
+                    Intent intent = new Intent(v.getContext(), ThirteenActivity.class);
                     v.getContext().startActivity(intent);
                 }
 

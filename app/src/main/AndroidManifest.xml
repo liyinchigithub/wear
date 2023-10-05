@@ -34,6 +34,7 @@
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
+
         <!-- 广播 -->
         <receiver
             android:name=".broadcast.TimeChangeReceiver"
@@ -117,8 +118,15 @@
         <activity
             android:name=".ThirteenActivity"
             android:exported="true"
-            android:label="@string/title_activity_thirteen">
+            android:label="@string/title_activity_thirteen"></activity>
+        <!-- 声明 第十四页 -->
+        <activity
+            android:name=".FourteenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_fourteen">
         </activity>
+        <!-- 声明 第十五页 -->
+        <!-- 声明 第十六页 -->
         <!-- 服务组件 -->
         <service
             android:name=".service.NetworkService"
