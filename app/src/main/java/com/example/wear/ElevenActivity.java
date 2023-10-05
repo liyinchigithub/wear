@@ -1,5 +1,6 @@
 package com.example.wear;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
@@ -57,6 +58,7 @@ public class ElevenActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //
         adapter.setOnItemClickListener(new ElevenActivityButtonAdapter.OnItemClickListener() {
+            @SuppressLint("RestrictedApi")
             @Override
             public void onItemClick(View v, int position) {
 //                Toast.makeText(ElevenActivity.this, "你点击了" + position, Toast.LENGTH_SHORT).show();
@@ -71,6 +73,9 @@ public class ElevenActivity extends AppCompatActivity {
                         Log.d("ButtonAdapter", "点击了第一个按钮");
                         AlertDialog
                                 .Builder builder = new AlertDialog.Builder(v.getContext());
+                        // 调整弹窗大小
+//                        builder.setView(new View(v.getContext()), 0, 0, 0, 0);
+                        //
                         builder.setTitle("提示");
                         builder.setMessage("确定要退出吗？");
                         builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {

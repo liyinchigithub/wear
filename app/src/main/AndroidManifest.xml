@@ -34,8 +34,16 @@
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
-
-        <!-- 数据共享 -->
+        <!-- 广播 -->
+        <receiver
+            android:name=".broadcast.TimeChangeReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver> <!-- 数据共享 -->
         <provider
             android:name=".Provider.Provider"
             android:authorities="com.example.wear.Provider"
@@ -101,22 +109,25 @@
             android:name=".ElevenActivity"
             android:exported="true"
             android:label="@string/title_activity_eleven"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-
-        </activity>
-        <!-- 声明 第十二页 -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- 声明 第十二页 -->
         <activity
             android:name=".TwelveActivity"
             android:exported="true"
-            android:label="@string/title_activity_twelve">
+            android:label="@string/title_activity_twelve" /> <!-- 声明 第十三页 -->
+        <activity
+            android:name=".ThirteenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirteen">
         </activity>
-        <!-- 声明 第十三页 -->
         <!-- 服务组件 -->
         <service
-            android:name=".util.NetworkService"
+            android:name=".service.NetworkService"
             android:enabled="true"
             android:exported="true"
             android:label="NetworkService" />
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false" />
         <service
             android:name=".MyWatchFace"
             android:exported="true"

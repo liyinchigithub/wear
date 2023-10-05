@@ -1,12 +1,10 @@
 package com.example.wear.adapter;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,14 +20,12 @@ import com.example.wear.FifthActivity;
 import com.example.wear.FourthActivity;
 import com.example.wear.MainActivity;
 import com.example.wear.NineActivity;
-import com.example.wear.SecondActivity;
 import com.example.wear.SevenActivity;
 import com.example.wear.SixthActivity;
 import com.example.wear.TenActivity;
 import com.example.wear.ThirdActivity;
-import com.example.wear.util.SensorService;
-import com.example.wear.util.StepService;
-import com.example.wear.util.WeatherService;
+import com.example.wear.service.SensorService;
+import com.example.wear.service.StepService;
 
 /** 按钮适配器
  * 

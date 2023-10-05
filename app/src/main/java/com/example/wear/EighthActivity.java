@@ -8,7 +8,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.wear.databinding.ActivityEighthBinding;
-import com.example.wear.util.MediaPlayerService;
+import com.example.wear.service.MediaPlayerService;
 
 public class EighthActivity extends Activity {
 
