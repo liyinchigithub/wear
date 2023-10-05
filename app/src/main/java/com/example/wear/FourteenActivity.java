@@ -3,6 +3,7 @@ package com.example.wear;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -60,6 +61,26 @@ public class FourteenActivity extends Activity {
                 } else {
                     Toast.makeText(FourteenActivity.this, "无法打开相册", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        // 播放音频
+        Button btnPlayAudio = findViewById(R.id.btnPlayAudio);
+        btnPlayAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 创建MediaPlayer对象
+                MediaPlayer mediaPlayer = MediaPlayer.create(FourteenActivity.this, R.raw.music);
+                // 播放音频文件
+                mediaPlayer.start();
+                // 监听音频播放完成事件
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        // 在音频播放完成后执行相应操作
+                        // 您可以在这里停止播放、释放MediaPlayer资源等
+                    }
+                });
             }
         });
     }

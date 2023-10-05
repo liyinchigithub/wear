@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.wear.EighthActivity;
 import com.example.wear.ElevenActivity;
 import com.example.wear.FifthActivity;
+import com.example.wear.FourteenActivity;
 import com.example.wear.FourthActivity;
 import com.example.wear.MainActivity;
 import com.example.wear.NineActivity;
@@ -212,7 +213,7 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 if(position == 14){
                    // 获取传感器信息
                     // 创建 Intent 对象
-                    Intent intent = new Intent(v.getContext(), SensorService.class);
+                    Intent intent = new Intent(v.getContext(), FourteenActivity.class);
                     // 调用 startActivity 方法发起请求
                     v.getContext().startActivity(intent);
                 }
@@ -227,7 +228,25 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
 
                 }
 
+                // 判断是否点击第十七个按钮
+                if(position == 16){
+                    // 获取步数
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), StepService.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
 
+                }
+
+                // 判断是否点击第十八个按钮
+                if(position == 17){
+                    // 获取步数
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), StepService.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+
+                }
             }
         });
     }
