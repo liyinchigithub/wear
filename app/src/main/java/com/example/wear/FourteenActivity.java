@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,7 +21,9 @@ public class FourteenActivity extends Activity {
     private static final int REQUEST_IMAGE_PICK = 2;
     private TextView mTextView;
     private ActivityFourteenBinding binding;
-
+    private MediaPlayer mediaPlayer;
+    //
+    boolean isPaused = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,23 +69,55 @@ public class FourteenActivity extends Activity {
 
         // 播放音频
         Button btnPlayAudio = findViewById(R.id.btnPlayAudio);
+
+        // 监听播放按钮
         btnPlayAudio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 创建MediaPlayer对象
-                MediaPlayer mediaPlayer = MediaPlayer.create(FourteenActivity.this, R.raw.music);
-                // 播放音频文件
-                mediaPlayer.start();
-                // 监听音频播放完成事件
-                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        // 在音频播放完成后执行相应操作
-                        // 您可以在这里停止播放、释放MediaPlayer资源等
+                if (mediaPlayer == null) {
+                    // 如果MediaPlayer对象为空，则创建并开始播放音频文件
+                    mediaPlayer = MediaPlayer.create(FourteenActivity.this, R.raw.music);
+                    mediaPlayer.start();
+                } else {
+                    if (isPaused) {
+                        // 如果音频已暂停，则继续播放
+                        mediaPlayer.start();
+                        isPaused = false;
+                    } else {
+                        // 如果音频正在播放，则暂停播放
+                        mediaPlayer.pause();
+                        isPaused = true;
                     }
-                });
+                }
             }
         });
+        //
+        Button btnPauseAudio = findViewById(R.id.btnPauseAudio);
+        // 监听暂停播放按钮
+        btnPauseAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+                    // 如果音频正在播放，则暂停播放
+                    mediaPlayer.pause();
+                } else {
+                    // 如果音频没有在播放，则开始播放
+                    mediaPlayer = MediaPlayer.create(FourteenActivity.this, R.raw.music);
+                    mediaPlayer.start();
+                }
+            }
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        // 释放 MediaPlayer 资源
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 
     @Override

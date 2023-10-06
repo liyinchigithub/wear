@@ -29,6 +29,41 @@
             android:id="@+id/btnPlayAudio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="播放音频" />
+            android:text="播放/暂停音频" />
+        <Button
+            android:id="@+id/btnPauseAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂停重新播放音频" />
     </LinearLayout>
+<!--        表格布局-->
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+<!--            <TableRow>-->
+<!--                <Button-->
+<!--                    android:id="@+id/btnOpenCamera"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="打开相机" />-->
+<!--                <Button-->
+<!--                    android:id="@+id/btnOpenGallery"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="打开相册" />-->
+<!--            </TableRow>-->
+<!--            <TableRow>-->
+<!--                <Button-->
+<!--                    android:id="@+id/btnPlayAudio"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="播放音频" />-->
+<!--                <Button-->
+<!--                    android:id="@+id/btnPauseAudio"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="暂停播放音频" />-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+
 </androidx.wear.widget.BoxInsetLayout>
