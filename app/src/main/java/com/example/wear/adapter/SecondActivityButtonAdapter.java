@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wear.EighthActivity;
 import com.example.wear.ElevenActivity;
+import com.example.wear.FifteenActivity;
 import com.example.wear.FifthActivity;
 import com.example.wear.FourteenActivity;
 import com.example.wear.FourthActivity;
@@ -222,7 +223,7 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 if(position == 15){
                     // 获取步数
                     // 创建 Intent 对象
-                    Intent intent = new Intent(v.getContext(), StepService.class);
+                    Intent intent = new Intent(v.getContext(), FifteenActivity.class);
                     // 调用 startActivity 方法发起请求
                     v.getContext().startActivity(intent);
 
