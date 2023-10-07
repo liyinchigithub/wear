@@ -15,6 +15,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许应用写入设备外部存储。 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许应用访问电话状态，如：设备的电话号码，当前的网络类型，是否正在通话等。 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +34,8 @@
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
+
+
         <!-- 广播 -->
         <receiver
             android:name=".broadcast.TimeChangeReceiver"
@@ -120,13 +123,44 @@
         <activity
             android:name=".FourteenActivity"
             android:exported="true"
-            android:label="@string/title_activity_fourteen"></activity> <!-- 声明 第十五页 -->
+            android:label="@string/title_activity_fourteen" /> <!-- 声明 第十五页 -->
         <activity
             android:name=".FifteenActivity"
             android:exported="true"
-            android:label="@string/title_activity_fifteen">
+            android:label="@string/title_activity_fifteen" /> <!-- 声明 第十六页 -->
+        <activity
+            android:name=".SixteenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_sixteen" /> <!-- 声明 第十七页 -->
+        <activity
+            android:name=".SeventeenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_seventeen" /> <!-- 声明 第十八页 -->
+        <activity
+            android:name=".NineteenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_nineteen" /> <!-- 声明 第十九页 -->
+        <activity
+            android:name=".EighteenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_eighteen" /> <!-- 声明 第二十页 -->
+        <activity
+            android:name=".TwentyActivity"
+            android:exported="true"
+            android:label="@string/title_activity_twenty" />
+        <!-- 声明 第二十页一 -->
+        <activity
+            android:name=".TwentyOneActivity"
+            android:exported="true"
+            android:label="@string/title_activity_twenty_one">
         </activity>
-        <!-- 声明 第十六页 -->
+        <!-- 声明 第二十页二 -->
+        <activity
+            android:name=".TwentyTowActivity"
+            android:exported="true"
+            android:label="@string/title_activity_twenty_tow">
+        </activity>
+
 
         <!-- 服务组件 -->
         <service

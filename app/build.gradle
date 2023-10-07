@@ -4,6 +4,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+
 //这个块定义了Android构建配置
 android {
     compileSdk 33   // 指定编译SDK版本，即项目编译的目标Android SDK版本

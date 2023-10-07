@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wear.EighteenActivity;
 import com.example.wear.EighthActivity;
 import com.example.wear.ElevenActivity;
 import com.example.wear.FifteenActivity;
@@ -22,12 +23,16 @@ import com.example.wear.FourteenActivity;
 import com.example.wear.FourthActivity;
 import com.example.wear.MainActivity;
 import com.example.wear.NineActivity;
+import com.example.wear.NineteenActivity;
 import com.example.wear.SevenActivity;
+import com.example.wear.SeventeenActivity;
+import com.example.wear.SixteenActivity;
 import com.example.wear.SixthActivity;
 import com.example.wear.TenActivity;
 import com.example.wear.ThirdActivity;
 import com.example.wear.ThirteenActivity;
 import com.example.wear.TwelveActivity;
+import com.example.wear.TwentyActivity;
 import com.example.wear.service.SensorService;
 import com.example.wear.service.StepService;
 
@@ -233,7 +238,7 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 if(position == 16){
                     // 获取步数
                     // 创建 Intent 对象
-                    Intent intent = new Intent(v.getContext(), StepService.class);
+                    Intent intent = new Intent(v.getContext(), SixteenActivity.class);
                     // 调用 startActivity 方法发起请求
                     v.getContext().startActivity(intent);
 
@@ -243,10 +248,32 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 if(position == 17){
                     // 获取步数
                     // 创建 Intent 对象
-                    Intent intent = new Intent(v.getContext(), StepService.class);
+                    Intent intent = new Intent(v.getContext(), SeventeenActivity.class);
                     // 调用 startActivity 方法发起请求
                     v.getContext().startActivity(intent);
 
+                }
+
+                // 判断是否点击第十九个按钮
+                if (position == 18){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), EighteenActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+                // 判断是否点击第二十个按钮
+                if (position == 19){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), NineteenActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+                // 判断是否点击第二十一个按钮
+                if (position == 20){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), TwentyActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
                 }
             }
         });

@@ -15,6 +15,9 @@
     <string name="button_text_send_notification">发送通知</string>
     <string name="button_text_cancel_notification">取消通知</string>
     <string name="seven_title">我是标题</string>
+    <string name="text_x">x</string>
+    <string name="text_y">y</string>
+    <string name="text_z">z</string>
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_fourth">FourthActivity</string>
@@ -34,4 +37,10 @@
     <string name="title_activity_eighth">activity_eighth</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="fragment">我是Fragment</string>
+    <string name="title_activity_sixteenn">SixteennActivity</string>
+    <string name="title_activity_eighteen">EighteenActivity</string>
+    <string name="title_activity_nineteen">NineteenActivity</string>
+    <string name="title_activity_twenty">TwentyActivity</string>
+    <string name="title_activity_twenty_one">TwentyOneActivity</string>
+    <string name="title_activity_twenty_tow">title_activity_twenty_tow</string>
 </resources>

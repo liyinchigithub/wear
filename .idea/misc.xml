@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/drawable/scrollbar_thumb.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/scrollbar_track.xml" value="0.1" />
         <entry key="app/src/main/res/layout/FourthActivity.xml" value="0.121875" />
+        <entry key="app/src/main/res/layout/activity_eighteen.xml" value="0.7286096256684492" />
         <entry key="app/src/main/res/layout/activity_eighth.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_eleven.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_fifteen.xml" value="0.896875" />
@@ -21,12 +22,18 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.41875" />
         <entry key="app/src/main/res/layout/activity_nine.xml" value="0.6564171122994652" />
+        <entry key="app/src/main/res/layout/activity_nineteen.xml" value="0.7286096256684492" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_seven.xml" value="0.484375" />
+        <entry key="app/src/main/res/layout/activity_seventeen.xml" value="0.6991978609625669" />
+        <entry key="app/src/main/res/layout/activity_sixteenn.xml" value="0.4375" />
         <entry key="app/src/main/res/layout/activity_ten.xml" value="0.4451871657754011" />
         <entry key="app/src/main/res/layout/activity_third.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/activity_thirteen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_twelve.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_twenty.xml" value="0.7286096256684492" />
+        <entry key="app/src/main/res/layout/activity_twenty_one.xml" value="0.7045454545454546" />
+        <entry key="app/src/main/res/layout/activity_twenty_tow_activity.xml" value="0.7045454545454546" />
         <entry key="app/src/main/res/layout/button_layout.xml" value="0.225" />
         <entry key="app/src/main/res/layout/fragment_one.xml" value="0.7296511627906976" />
         <entry key="app/src/main/res/layout/item_button.xml" value="0.5247093023255814" />
