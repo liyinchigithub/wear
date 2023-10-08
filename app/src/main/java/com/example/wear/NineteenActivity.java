@@ -133,16 +133,16 @@ public class NineteenActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // 查询数据
-                String[] projection = {"id", "name", "age"};//
-                String selection = "age > ?";// 查询条件
-                String[] selectionArgs = {"20"};// 条件参数
+                String[] projection = {"id", "name", "username"};//
+                String selection = "id > ?";// 查询条件
+                String[] selectionArgs = {"1"};// 条件参数
                 cursor = database.query("mytable", projection, selection, selectionArgs, null, null, null);
                 // 游标
                 while (cursor.moveToNext()) {
                     int id = cursor.getInt(cursor.getColumnIndex("id"));
                     String name = cursor.getString(cursor.getColumnIndex("name"));
-                    int age = cursor.getInt(cursor.getColumnIndex("age"));
-                    Log.d("Database", "ID: " + id + ", Name: " + name + ", Age: " + age);
+                    int username = cursor.getInt(cursor.getColumnIndex("username"));
+                    Log.d("Database", "ID: " + id + ", Name: " + name + ", username: " + username);
                 }
             }
         });
@@ -164,7 +164,6 @@ public class NineteenActivity extends Activity {
                     // 插入数据
                     ContentValues values = new ContentValues();
                     values.put("name", "lisi");
-                    values.put("age", 20);
                     values.put("username", "lisi");
                     values.put("password", "123456");
                     long newRowId = database.insert("mytable", null, values);
