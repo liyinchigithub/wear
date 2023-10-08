@@ -33,6 +33,8 @@ import com.example.wear.ThirdActivity;
 import com.example.wear.ThirteenActivity;
 import com.example.wear.TwelveActivity;
 import com.example.wear.TwentyActivity;
+import com.example.wear.TwentyOneActivity;
+import com.example.wear.TwentyTowActivity;
 import com.example.wear.service.SensorService;
 import com.example.wear.service.StepService;
 
@@ -272,6 +274,34 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 if (position == 20){
                     // 创建 Intent 对象
                     Intent intent = new Intent(v.getContext(), TwentyActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+                // 判断是否点击第二十二个按钮
+                if (position == 21){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), TwentyOneActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+                // 判断是否点击第二十三个按钮
+                if (position == 22){
+                        // 创建 Intent 对象
+                        Intent intent = new Intent(v.getContext(), TwentyTowActivity.class);
+                        // 调用 startActivity 方法发起请求
+                        v.getContext().startActivity(intent);
+                }
+                // 判断是否点击第二十四个按钮
+                if (position == 23){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), TwentyTowActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+                // 判断是否点击第二十五个按钮
+                if (position == 24){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), TwentyTowActivity.class);
                     // 调用 startActivity 方法发起请求
                     v.getContext().startActivity(intent);
                 }

@@ -7,18 +7,82 @@
     android:padding="@dimen/box_inset_layout_padding"
     tools:context=".NineteenActivity"
     tools:deviceIds="wear">
-
-    <FrameLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding"
-        app:layout_boxedEdges="all">
-
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
+        android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+        android:scrollbarTrackVertical="@drawable/scrollbar_track"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--       创建数据库按钮-->
+        <EditText
+            android:id="@+id/edit_text_create_database"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello_world" />
+            android:hint="请输入文本" />
+        <Button
+            android:id="@+id/button_create_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="创建数据库" />
+        <!--       查询数据-->
+        <EditText
+            android:id="@+id/edit_text_query_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入文本" />
+        <Button
+            android:id="@+id/button_query_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查询数据库" />
+        <!--       删除数据-->
+        <EditText
+            android:id="@+id/edit_text_delete_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入文本" />
+        <Button
+            android:id="@+id/button_delete_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除数据" />
+        <!--       插入数据-->
+        <EditText
+            android:id="@+id/edit_text_insert_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入文本" />
+        <Button
+            android:id="@+id/button_insert_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="插入数据" />
+        <!--       更新数据-->
+        <EditText
+            android:id="@+id/edit_text_update_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入文本" />
+        <Button
+            android:id="@+id/button_update_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="更新数据" />
+        <Button
+            android:id="@+id/button_transaction_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="事务" />
+    </LinearLayout>
+        </ScrollView>
 
-    </FrameLayout>
+
+
+
 </androidx.wear.widget.BoxInsetLayout>
