@@ -5,11 +5,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaRecorder;
 import android.os.Handler;
+import android.util.Log;
 import android.view.KeyEvent;
+import android.widget.Toast;
 
 import java.io.IOException;
 
 public class KeyRecordBroadcastReceiver extends BroadcastReceiver {
+    private static final String TAG = "KeyRecordBroadcastReceiver";
     private int clickCount = 0;
     private long lastClickTime = 0;
     private Context context; // 添加一个Context字段
@@ -36,6 +39,7 @@ public class KeyRecordBroadcastReceiver extends BroadcastReceiver {
                 }
             }
         }
+        Log.d(TAG, "onReceive() called");
     }
 
     private void startRecording() {
@@ -53,6 +57,7 @@ public class KeyRecordBroadcastReceiver extends BroadcastReceiver {
 
         // 设置录音文件的保存路径和文件名
         String filePath = context.getExternalFilesDir(null).getAbsolutePath() + "/recording.mp3";
+        Log.d(TAG, "filePath: " + filePath);
         recorder.setOutputFile(filePath);
 
         try {
@@ -61,9 +66,9 @@ public class KeyRecordBroadcastReceiver extends BroadcastReceiver {
 
             // 开始录音
             recorder.start();
-
+            Log.d(TAG, "startRecording() called");
             // 在这里可以添加一些UI提示，例如显示一个录音中的通知
-
+            Toast.makeText(context, "开始录音", Toast.LENGTH_SHORT).show();
             // 录音持续一段时间后停止录音
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {

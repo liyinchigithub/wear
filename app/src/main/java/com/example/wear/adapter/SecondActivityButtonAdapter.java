@@ -33,7 +33,9 @@ import com.example.wear.ThirdActivity;
 import com.example.wear.ThirteenActivity;
 import com.example.wear.TwelveActivity;
 import com.example.wear.TwentyActivity;
+import com.example.wear.TwentyFourActivity;
 import com.example.wear.TwentyOneActivity;
+import com.example.wear.TwentyThirdActivity;
 import com.example.wear.TwentyTowActivity;
 import com.example.wear.service.SensorService;
 import com.example.wear.service.StepService;
@@ -294,14 +296,14 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                 // 判断是否点击第二十四个按钮
                 if (position == 23){
                     // 创建 Intent 对象
-                    Intent intent = new Intent(v.getContext(), TwentyTowActivity.class);
+                    Intent intent = new Intent(v.getContext(), TwentyThirdActivity.class);
                     // 调用 startActivity 方法发起请求
                     v.getContext().startActivity(intent);
                 }
                 // 判断是否点击第二十五个按钮
                 if (position == 24){
                     // 创建 Intent 对象
-                    Intent intent = new Intent(v.getContext(), TwentyTowActivity.class);
+                    Intent intent = new Intent(v.getContext(), TwentyFourActivity.class);
                     // 调用 startActivity 方法发起请求
                     v.getContext().startActivity(intent);
                 }

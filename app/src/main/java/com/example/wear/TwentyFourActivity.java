@@ -23,7 +23,15 @@ public class TwentyFourActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_twenty_four);
+
+        // 创建广播接收器实例
+        receiver = new KeyRecordBroadcastReceiver();
+
+        // 注册广播接收器
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_MEDIA_BUTTON);
+        registerReceiver(receiver, filter);
 
         // Request audio recording permission
         ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
