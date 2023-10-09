@@ -55,11 +55,11 @@ public class NineteenActivity extends Activity {
         buttonUpdateDatabase = binding.buttonUpdateDatabase;
         buttonTransactionDatabase = binding.buttonTransactionDatabase;
         //  设置输入框默认值
-        editTextCreateDatabase.setText("create table user(id integer primary key, name text, age integer,username text,password text)");
+        editTextCreateDatabase.setText("create table user(id integer primary key, name text,username text,password text)");
         editTextQueryDatabase.setText("select * from user");
         editTextDeleteDatabase.setText("drop table user");
         editTextInsertDatabase.setText("insert into user values(1, 'zhangsan', 20)");
-        editTextUpdateDatabase.setText("update user set name='lisi',age=21 where id=1");
+        editTextUpdateDatabase.setText("update user set name='lisi',username='wangwwu' where id=2");
 
         // 创建数据库实例
         DatabaseHelper dbHelper = new DatabaseHelper(NineteenActivity.this);
