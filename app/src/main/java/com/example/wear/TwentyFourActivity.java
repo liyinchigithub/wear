@@ -29,17 +29,21 @@ public class TwentyFourActivity extends Activity {
         receiver = new KeyRecordBroadcastReceiver();
 
         // 注册广播接收器
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(Intent.ACTION_MEDIA_BUTTON);
+        IntentFilter filter = new IntentFilter();//
+        filter.addAction(Intent.ACTION_MEDIA_BUTTON);//
         registerReceiver(receiver, filter);
 
-        // Request audio recording permission
+        // 申请录音权限（权限弹窗）
         ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
     }
 
+    /**
+     *
+     * */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        // 判断
         if (requestCode == REQUEST_RECORD_AUDIO_PERMISSION) {
             permissionToRecordAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
         }
@@ -48,6 +52,7 @@ public class TwentyFourActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        // 判断是否已同意录音权限
         if (permissionToRecordAccepted) {
             // Register the broadcast receiver to listen for media button events
             receiver = new KeyRecordBroadcastReceiver();
@@ -64,9 +69,4 @@ public class TwentyFourActivity extends Activity {
     }
 
 
-
-    private void startRecording() {
-        // Start recording logic here
-        // ...
-    }
 }

@@ -17,7 +17,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -45,14 +45,14 @@
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".broadcast.KeyRecordBroadcastReceiver"
+        <receiver
+            android:name=".broadcast.KeyRecordBroadcastReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
-        </receiver>
-        <!-- 数据共享 -->
+        </receiver> <!-- 数据共享 -->
         <provider
             android:name=".Provider.Provider"
             android:authorities="com.example.wear.Provider"
@@ -162,19 +162,25 @@
         <activity
             android:name=".TwentyTowActivity"
             android:exported="true"
-            android:label="@string/title_activity_twenty_tow" />
-        <!-- 声明 第二十页三 -->
+            android:label="@string/title_activity_twenty_tow" /> <!-- 声明 第二十页三 -->
         <activity
             android:name=".TwentyThirdActivity"
             android:exported="true"
-            android:label="@string/title_activity_twenty_third">
-        </activity>
-        <!-- 声明 第二十页四 -->
+            android:label="@string/title_activity_twenty_third"></activity> <!-- 声明 第二十页四 -->
         <activity
             android:name=".TwentyFourActivity"
             android:exported="true"
-            android:label="@string/title_activity_twenty_four">
+            android:label="@string/title_activity_twenty_four"></activity>
+        <!-- 声明 第二十页五 -->
+        <activity
+            android:name=".TwentyFiveActivity"
+            android:exported="true"
+            android:label="@string/activity_twenty_five">
         </activity>
+        <!-- 声明 第二十六页 -->
+        <!-- 声明 第二十七页 -->
+        <!-- 声明 第二十八页 -->
+
         <!-- 服务组件 -->
         <service
             android:name=".service.NetworkService"
