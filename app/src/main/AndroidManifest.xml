@@ -35,7 +35,7 @@
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
-        <!-- 广播 -->
+         <!-- 广播 -->
         <receiver
             android:name=".broadcast.TimeChangeReceiver"
             android:enabled="true"
@@ -102,9 +102,9 @@
             android:label="@string/title_activity_seven"
             android:launchMode="singleTask" /> <!-- 声明 第八页 -->
         <activity
-            android:name=".EighthActivity"
+            android:name=".EightActivity"
             android:exported="true"
-            android:label="@string/title_activity_eighth"
+            android:label="@string/title_activity_eight"
             android:launchMode="singleTask" /> <!-- 声明 第九页 -->
         <activity
             android:name=".NineActivity"
@@ -178,13 +178,33 @@
         <activity
             android:name=".TwentySixActivity"
             android:exported="true"
-            android:label="@string/title_activity_twenty_six"></activity> <!-- 声明 第二十七页 -->
+            android:label="@string/title_activity_twenty_six" /> <!-- 声明 第二十七页 -->
         <activity
             android:name=".TwentySevenActivity"
             android:exported="true"
-            android:label="@string/title_activity_twenty_seven">
+            android:label="@string/title_activity_twenty_seven" /> <!-- 声明 第二十八页 -->
+        <activity
+            android:name=".TwentyEightActivity"
+            android:exported="true"
+            android:label="@string/title_activity_twenty_eight" /> <!-- 声明 第二十九 -->
+        <activity
+            android:name=".TwentyNineActivity"
+            android:exported="true"
+            android:label="@string/title_activity_twenty_nine">
         </activity>
-        <!-- 声明 第二十八页 -->
+        <!-- 声明 第三十页 -->
+        <activity
+            android:name=".ThirtyActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty">
+        </activity>
+        <!-- 声明 第三十一页 -->
+        <activity
+            android:name=".ThirtyOneActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_one">
+        </activity>
+        <!-- 声明 第三十二页 -->
         <!-- 服务组件 -->
         <service
             android:name=".service.NetworkService"

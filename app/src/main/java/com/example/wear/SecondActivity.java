@@ -30,7 +30,7 @@ public class SecondActivity extends Activity {
         // 设置布局管理器
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // 设置适配器 用于显示按钮
-        recyclerView.setAdapter(new SecondActivityButtonAdapter(new String[]{"返回0", "滚动条1", "定位2", "通知3", "唤起语音输入4", "数据同步5", "存储数据6", "获取数据7", "wifi开关", "音乐播放", "发送通知10", "顶栏底栏弹窗11", "广播12", "HTTP请求", "相机相册14", "sharePreferences15", "心率16", "步数17","加速器18","SQLite19","压力20","光度21","温度22","ContentProvider23","BroadcastReceiver24","智能语音25","service26","27","28","29","30"}));
+        recyclerView.setAdapter(new SecondActivityButtonAdapter(new String[]{"返回0", "滚动条1", "定位2", "通知3", "唤起语音输入4", "数据同步5", "存储数据6", "获取数据7", "wifi开关", "音乐播放", "发送通知10", "顶栏底栏弹窗11", "广播12", "HTTP请求", "相机相册14", "sharePreferences15", "心率16", "步数17","加速器18","SQLite19","压力20","光度21","温度22","ContentProvider23","BroadcastReceiver24","智能语音25","service26","Activity通信27","28","29","30","31","32"}));
         // 添加按钮点击监听器
         recyclerView.addOnItemTouchListener(new ButtonClickListener(this));
         // 设置列表背景颜色

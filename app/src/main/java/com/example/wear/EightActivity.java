@@ -1,25 +1,21 @@
 package com.example.wear;
 
 import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.wear.databinding.ActivityEighthBinding;
+import com.example.wear.databinding.ActivityEightBinding;
 import com.example.wear.service.MediaPlayerService;
 
-public class EighthActivity extends Activity {
+public class EightActivity extends Activity {
 
     private TextView mTextView;
     private Button mediaPlayerButton;
-    private ActivityEighthBinding binding;
+    private ActivityEightBinding binding;
     /**
      * 当 Activity 被创建时，这个方法会被调用
      * */
@@ -27,7 +23,7 @@ public class EighthActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityEighthBinding.inflate(getLayoutInflater());
+        binding = ActivityEightBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         // 获取布局元素
         mTextView = binding.text;
@@ -42,7 +38,7 @@ public class EighthActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // 调用MediaPlayerService 这个service组件
-                startService(new Intent(EighthActivity.this, MediaPlayerService.class));
+                startService(new Intent(EightActivity.this, MediaPlayerService.class));
                 // 日志输出
                 Log.d("EighthActivity", "onClick");
             }

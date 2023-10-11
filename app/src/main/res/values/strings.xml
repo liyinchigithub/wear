@@ -49,4 +49,8 @@
     <string name="activity_twenty_five">activity_twenty_five</string>
     <string name="title_activity_twenty_six">TwentySixActivity</string>
     <string name="title_activity_twenty_seven">TwentySevenActivity</string>
+    <string name="title_activity_twenty_eight">TwentyEightActivity</string>
+    <string name="title_activity_twenty_nine">TwentyNineActivity</string>
+    <string name="title_activity_thirty">ThirtyActivity</string>
+    <string name="title_activity_thirty_one">ThirtyOneActivity</string>
 </resources>
