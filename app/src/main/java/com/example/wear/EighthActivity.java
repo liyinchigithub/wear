@@ -1,10 +1,15 @@
 package com.example.wear;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.wear.databinding.ActivityEighthBinding;
@@ -13,6 +18,7 @@ import com.example.wear.service.MediaPlayerService;
 public class EighthActivity extends Activity {
 
     private TextView mTextView;
+    private Button mediaPlayerButton;
     private ActivityEighthBinding binding;
     /**
      * 当 Activity 被创建时，这个方法会被调用
@@ -23,13 +29,24 @@ public class EighthActivity extends Activity {
 
         binding = ActivityEighthBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        // 获取布局元素
         mTextView = binding.text;
-
-        // 调用MediaPlayerService 这个service组件
-        bindService(new Intent(this, MediaPlayerService.class), null, BIND_AUTO_CREATE);
+        mTextView.setText("播放音乐");
         // 日志输出
         Log.d("EighthActivity", "onCreate");
+
+        // 获取布局按钮
+        mediaPlayerButton = binding.mediaPlayerButton;
+        // 监听按钮
+        mediaPlayerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 调用MediaPlayerService 这个service组件
+                startService(new Intent(EighthActivity.this, MediaPlayerService.class));
+                // 日志输出
+                Log.d("EighthActivity", "onClick");
+            }
+        });
     }
     /**
      *  当Activity 被可见时，这个方法会被调用
@@ -37,19 +54,17 @@ public class EighthActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        mTextView.setText("发生异常保存数据");
         // 日志输出
         Log.d("EighthActivity", "onStart");
     }
 
+
     /**
-     * 当 Activity 被重新
+     * 当Activity 可见时，这个方法会被调用
      * */
     @Override
     protected void onResume() {
         super.onResume();
-        // 日志输出
-        Log.d("EighthActivity", "onResume");
     }
 
     /**
@@ -81,7 +96,7 @@ public class EighthActivity extends Activity {
         // 日志输出
         Log.d("EighthActivity", "onDestroy");
         // 解除绑定
-        unbindService(null);
+       stopService(new Intent(this, MediaPlayerService.class));
     }
 
     /**
@@ -115,45 +130,4 @@ public class EighthActivity extends Activity {
         Log.d("EighthActivity", "onRestoreInstanceState");
     }
 
-    /**
-     * 当 Activity 的配置信息发生改变时，这个方法会被调用
-     * 例如：屏幕方向发生改变，键盘弹出，屏幕方向发生改变等
-     *
-     * */
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        // 判断屏幕方向
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            // 横屏
-
-        } else {
-            // 竖屏
-        }
-
-        // 判断键盘是否弹出
-        if (newConfig.hardKeyboardHidden == Configuration.KEYBOARDHIDDEN_NO) {
-
-        }
-
-        // 判断屏幕布局发生改变
-        if (newConfig.screenLayout == Configuration.SCREENLAYOUT_SIZE_LARGE) {
-
-        }
-
-        // 判断屏幕的可用大小发生改变
-        if (newConfig.screenWidthDp == Configuration.SCREENLAYOUT_SIZE_LARGE) {
-
-        }
-
-        // 判断UI模式发生改变
-        if (newConfig.uiMode == Configuration.UI_MODE_TYPE_NORMAL) {
-
-        }
-
-        // 判断键盘类型
-        if (newConfig.keyboard == Configuration.KEYBOARD_12KEY) {
-
-        }
-    }
 }

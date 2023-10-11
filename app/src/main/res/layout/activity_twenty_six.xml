@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".TwentySixActivity"
+    tools:deviceIds="wear">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/startServiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="StartService"
+            android:onClick="onClickStartService"/>
+        <Button
+            android:id="@+id/stopServiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="StopService"
+            android:onClick="onClickStopService"/>
+        <Button
+            android:id="@+id/bindServiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BindServic"
+            android:onClick="onClickBindService"/>
+        <Button
+            android:id="@+id/unbindServiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="unBindServic"
+            android:onClick="onClickUnbindService"/>
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>

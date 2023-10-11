@@ -15,7 +15,9 @@ import com.example.wear.databinding.ActivityTwentyFiveBinding;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * 智能语音输入
+ * */
 public class TwentyFiveActivity extends Activity {
 
     private TextView mTextView;

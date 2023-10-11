@@ -5,6 +5,15 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
+// 定义变量
 
+ext {
+    lastversion= "3.5.0"
+//    versionCode = 32300
+//    versionName = "3.23.0"
+//    compileSdkVersion = 33
+//    minSdkVersion = 21
+//    targetSdkVersion = 26
+}
 
 
