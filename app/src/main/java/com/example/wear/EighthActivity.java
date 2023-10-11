@@ -95,8 +95,8 @@ public class EighthActivity extends Activity {
         super.onDestroy();
         // 日志输出
         Log.d("EighthActivity", "onDestroy");
-        // 解除绑定
-       stopService(new Intent(this, MediaPlayerService.class));
+        // 解除绑定Service
+//       stopService(new Intent(this, MediaPlayerService.class));// activity销毁并同步销毁启动的MediaPlayerService组件
     }
 
     /**
