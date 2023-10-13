@@ -56,14 +56,17 @@ public class TwentyNineActivity extends Activity {
      * 发送广播 发送给 注册过这个广播的接收者
      * */
     public void sendDynamicBroadcast(View view) {
-        Intent intent = new Intent();
         //
+        Intent intent = new Intent();
+        intent.putExtra("customer1", "liyinchi1111");
+        // 放入数组数据到意图中
         intent.putStringArrayListExtra("customer",  new ArrayList<String>(){
             {
                 add("liyinchi1");
                 add("liyinchi2");
 
                 /**
+                 * 相当于
                  * {
                  *     "customer":[
                  *          "liyinchi1",
@@ -75,14 +78,14 @@ public class TwentyNineActivity extends Activity {
             }
         });
         intent.setAction(ActionUtils.ACTION_DY_FLAG);// 与注册时保持一致
-        sendBroadcast(intent);
+        sendBroadcast(intent);// 发送广播
         Log.d("TAG", "sendDynamicBroadcast");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(dyCustomerReceiver);
+        unregisterReceiver(dyCustomerReceiver);// 注销广播
 
     }
 }
