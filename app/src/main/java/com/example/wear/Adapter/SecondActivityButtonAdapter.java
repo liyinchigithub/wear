@@ -32,7 +32,12 @@ import com.example.wear.TenActivity;
 import com.example.wear.ThirdActivity;
 import com.example.wear.ThirteenActivity;
 import com.example.wear.ThirtyActivity;
+import com.example.wear.ThirtyEightActivity;
+import com.example.wear.ThirtyFiveActivity;
+import com.example.wear.ThirtyFourActivity;
 import com.example.wear.ThirtyOneActivity;
+import com.example.wear.ThirtySevenActivity;
+import com.example.wear.ThirtySixActivity;
 import com.example.wear.ThirtyThreeActivity;
 import com.example.wear.ThirtyTowActivity;
 import com.example.wear.TwelveActivity;
@@ -370,10 +375,49 @@ public class SecondActivityButtonAdapter extends RecyclerView.Adapter<SecondActi
                     // 调用 startActivity 方法发起请求
                     v.getContext().startActivity(intent);
                 }
-                // 判断是否点击第三十三个按钮
+                // 判断是否点击第三十四个按钮
                 if (position == 33){
                     // 创建 Intent 对象
                     Intent intent = new Intent(v.getContext(), ThirtyThreeActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+
+                // 判断是否点击第三十五个按钮
+                if (position == 34){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), ThirtyFourActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+
+                // 判断是否点击第三十六个按钮
+                if (position == 35){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), ThirtyFiveActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+
+                // 判断是否点击第三十七个按钮
+                if (position == 36){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), ThirtySixActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+
+                // 判断是否点击第三十八个按钮
+                if (position == 37){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), ThirtySevenActivity.class);
+                    // 调用 startActivity 方法发起请求
+                    v.getContext().startActivity(intent);
+                }
+                // 判断是否点击第三十九个按钮
+                if (position == 38){
+                    // 创建 Intent 对象
+                    Intent intent = new Intent(v.getContext(), ThirtyEightActivity.class);
                     // 调用 startActivity 方法发起请求
                     v.getContext().startActivity(intent);
                 }
