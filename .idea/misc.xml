@@ -31,7 +31,13 @@
         <entry key="app/src/main/res/layout/activity_third.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/activity_thirteen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_thirty.xml" value="0.5521390374331551" />
+        <entry key="app/src/main/res/layout/activity_thirty_eight.xml" value="0.3729946524064171" />
+        <entry key="app/src/main/res/layout/activity_thirty_five.xml" value="0.38125" />
+        <entry key="app/src/main/res/layout/activity_thirty_four.xml" value="0.38125" />
         <entry key="app/src/main/res/layout/activity_thirty_one.xml" value="0.5521390374331551" />
+        <entry key="app/src/main/res/layout/activity_thirty_seven.xml" value="0.38125" />
+        <entry key="app/src/main/res/layout/activity_thirty_six.xml" value="0.38125" />
+        <entry key="app/src/main/res/layout/activity_thirty_three.xml" value="1.209375" />
         <entry key="app/src/main/res/layout/activity_twelve.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_twenty.xml" value="0.7286096256684492" />
         <entry key="app/src/main/res/layout/activity_twenty_eight.xml" value="0.5882352941176471" />
@@ -50,7 +56,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

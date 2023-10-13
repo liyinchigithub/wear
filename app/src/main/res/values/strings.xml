@@ -53,4 +53,11 @@
     <string name="title_activity_twenty_nine">TwentyNineActivity</string>
     <string name="title_activity_thirty">ThirtyActivity</string>
     <string name="title_activity_thirty_one">ThirtyOneActivity</string>
+    <string name="title_activity_thirty_tow">ThirtyTowActivity</string>
+    <string name="title_activity_thirty_three">ThirtyThreeActivity</string>
+    <string name="title_activity_thirty_four">ThirtyFourActivity</string>
+    <string name="title_activity_thirty_five">ThirtyFiveActivity</string>
+    <string name="title_activity_thirty_six">ThirtySixActivity</string>
+    <string name="title_activity_thirty_seven">ThirtySevenActivity</string>
+    <string name="title_activity_thirty_eight">ThirtyEightActivity</string>
 </resources>

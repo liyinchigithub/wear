@@ -15,7 +15,14 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="31"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:textSize="30sp"/>
         </ScrollView>
     </LinearLayout>
 </androidx.wear.widget.BoxInsetLayout>

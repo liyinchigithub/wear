@@ -23,6 +23,7 @@ public class BatteryReceiver extends BroadcastReceiver {
 
             if (batteryPercentage < 30) {
                 Toast.makeText(context, "电池电量低于30%", Toast.LENGTH_SHORT).show();
+                Log.d("BatteryReceiver", "onReceive: " + String.valueOf(batteryPercentage)+"%");
             }
         }
 

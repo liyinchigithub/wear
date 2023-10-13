@@ -52,4 +52,30 @@ cd /Users/liyinchi/TestTool/android-sdk-macosx/emulator/emulator -avd Wear_OS_Sq
 每次启动没有再进入系统，直接进入应用
 
 
+# 目录结构
+
+
+## ActionUtils.java
+
+广播ID
+> /wear/app/src/main/java/com/example/wear/Broadcast/ActionUtils.java
+
+
+# 注意事项
+
+* 每次新增页面 wear > activity 都会在AndroidManifest.xml中自动生成，位置在最前面，且有intent-filter作为启动页
+```xml
+ <activity
+            android:name=".ThirtyEightActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_eight">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+```
+
+可以把intent-filter 去掉，这样就不会自动启动了
 

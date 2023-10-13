@@ -24,21 +24,38 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
-        <receiver
-            android:name=".BatterReceiver"
-            android:enabled="true"
-            android:exported="true"></receiver>
-
         <uses-library
             android:name="com.google.android.wearable"
             android:required="true" />
+
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
         <meta-data
             android:name="com.google.android.wearable.standalone"
-            android:value="true" /> <!-- 注册广播 -->
+            android:value="true" />
+
+        <activity
+            android:name=".ThirtyEightActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_eight">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ThirtySevenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_seven">
+        </activity>
+
+        <service
+            android:name=".service.BatteryService"
+            android:enabled="true"
+            android:exported="true" /> <!-- 注册广播 -->
         <receiver
             android:name=".Broadcast.TimeChangeReceiver"
             android:enabled="true"
@@ -63,9 +80,7 @@
             <intent-filter>
                 <action android:name="com.example.wear.ACTION_CUSTOM_ACTION" />
             </intent-filter>
-        </receiver>
-
-        <!-- 数据共享 -->
+        </receiver> <!-- 数据共享 -->
         <provider
             android:name=".Provider.Provider"
             android:authorities="com.example.wear.Provider"
@@ -203,15 +218,36 @@
         <activity
             android:name=".TwentyNineActivity"
             android:exported="true"
-            android:label="@string/title_activity_twenty_nine"></activity> <!-- 声明 第三十页 -->
+            android:label="@string/title_activity_twenty_nine" /> <!-- 声明 第三十页 -->
         <activity
             android:name=".ThirtyActivity"
             android:exported="true"
-            android:label="@string/title_activity_thirty"></activity> <!-- 声明 第三十一页 -->
+            android:label="@string/title_activity_thirty" /> <!-- 声明 第三十一页 -->
         <activity
             android:name=".ThirtyOneActivity"
             android:exported="true"
-            android:label="@string/title_activity_thirty_one"></activity> <!-- 声明 第三十二页 -->
+            android:label="@string/title_activity_thirty_one" /> <!-- 声明 第三十二页 -->
+        <activity
+            android:name=".ThirtyTowActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_tow" /> <!-- 声明 第三十三页 -->
+        <activity
+            android:name=".ThirtyThreeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_three" /> <!-- 声明 第三十四页 -->
+        <activity
+            android:name=".ThirtyFourActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_four" /> <!-- 声明 第三十五页 -->
+        <activity
+            android:name=".ThirtyFiveActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_five" /> <!-- 声明 第三十六页 -->
+        <activity
+            android:name=".ThirtySixActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_six" /> <!-- 声明 第三十七页 -->
+        <!-- 声明 第三十八页 -->
         <!-- 服务组件 -->
         <service
             android:name=".service.NetworkService"

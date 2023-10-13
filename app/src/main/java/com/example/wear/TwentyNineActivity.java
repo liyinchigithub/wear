@@ -13,6 +13,7 @@ import com.example.wear.Broadcast.ActionUtils;
 import com.example.wear.Broadcast.BatteryReceiver;
 import com.example.wear.Broadcast.DyCustomerReceiver;
 import com.example.wear.databinding.ActivityTwentyNineBinding;
+import com.example.wear.service.BatteryService;
 
 import java.util.ArrayList;
 
@@ -49,6 +50,7 @@ public class TwentyNineActivity extends Activity {
 
     }
 
+
     /**
      * 静态注册广播（很少使用这种方式）
      * 布局按钮点击事件
@@ -58,8 +60,9 @@ public class TwentyNineActivity extends Activity {
         Intent intent = new Intent();
         intent.putExtra("customer", "liyinchi");
         intent.setAction(ActionUtils.ACTION_FLAG);// 与注册时保持一致
-        Log.d("TAG", "sendStaticBroadcast: ");
         sendBroadcast(intent);
+        Log.d("TAG", "sendStaticBroadcast: ");
+
 
     }
     /**
