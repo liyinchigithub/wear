@@ -36,22 +36,6 @@
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
-        <activity
-            android:name=".ThirtyEightActivity"
-            android:exported="true"
-            android:label="@string/title_activity_thirty_eight">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ThirtySevenActivity"
-            android:exported="true"
-            android:label="@string/title_activity_thirty_seven">
-        </activity>
-
         <service
             android:name=".service.BatteryService"
             android:enabled="true"
@@ -246,8 +230,17 @@
         <activity
             android:name=".ThirtySixActivity"
             android:exported="true"
-            android:label="@string/title_activity_thirty_six" /> <!-- 声明 第三十七页 -->
+            android:label="@string/title_activity_thirty_six" />
+        <!-- 声明 第三十七页 -->
+        <activity
+            android:name=".ThirtySevenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_seven"></activity>
         <!-- 声明 第三十八页 -->
+        <activity
+            android:name=".ThirtyEightActivity"
+            android:exported="true"
+            android:label="@string/title_activity_thirty_eight"></activity>
         <!-- 服务组件 -->
         <service
             android:name=".service.NetworkService"
