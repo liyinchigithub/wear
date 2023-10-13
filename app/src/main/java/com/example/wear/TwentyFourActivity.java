@@ -6,13 +6,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 
-import com.example.wear.broadcast.KeyRecordBroadcastReceiver;
-import com.example.wear.databinding.ActivityTwentyFourBinding;
+import com.example.wear.Broadcast.KeyRecordBroadcastReceiver;
 
 public class TwentyFourActivity extends Activity {
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;

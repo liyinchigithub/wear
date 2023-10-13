@@ -1,4 +1,4 @@
-package com.example.wear.broadcast;
+package com.example.wear.Broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

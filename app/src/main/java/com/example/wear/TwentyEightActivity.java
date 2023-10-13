@@ -24,9 +24,14 @@ public class TwentyEightActivity extends Activity {
 
 //        mTextView = binding.twenty_eight_text;
         // 接收TwentySevenActivity发过来的参数
-         intent = getIntent();
-        String value = intent.getStringExtra("li"); // 使用键值对的形式获取参数
-        Log.d("TwentyEightActivity li", value);
+        intent = getIntent();
+        if (intent != null){
+            String value = intent.getStringExtra("li"); // 使用键值对的形式获取参数
+            Log.d("TwentyEightActivity li", value);
+            binding.twentyEightText.setText(value);
+        }else{
+            binding.twentyEightText.setText("没有收到27发过来的数据");
+        }
 
 //        MyObject object1 = (MyObject) intent.getSerializableExtra("key1");
 //        Log.d("SenderActivity", "Object1: " + object1); // 检查对象是否为null

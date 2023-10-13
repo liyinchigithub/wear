@@ -6,14 +6,14 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.wear.broadcast.TimeChangeReceiver;
+import com.example.wear.Broadcast.TimeChangeReceiver;
 import com.example.wear.databinding.ActivityTwelveBinding;
 
 public class TwelveActivity extends Activity {
 
     private TextView mTextView;
     private ActivityTwelveBinding binding;
-    private TimeChangeReceiver timeChangeReceiver;
+    private TimeChangeReceiver timeChangeReceiver;// BroadcastReceiver的实现类
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +24,10 @@ public class TwelveActivity extends Activity {
 
         mTextView = binding.text;
 
-        // 针对系统时间改变的广播注册和接收。当系统时间发生改变时，您的广播接收器将收到相应的广播，并在onReceive()方法中执行您想要的操作
+        // 针对系统时间改变的广播注册和接收。
+        // 当系统时间发生改变时，您的广播接收器将收到相应的广播，并在onReceive()方法中执行您想要的操作
         // 创建广播接收器实例
         timeChangeReceiver = new TimeChangeReceiver();
-
         // 创建IntentFilter并添加对ACTION_TIME_CHANGED的过滤
         IntentFilter intentFilter = new IntentFilter(Intent.ACTION_TIME_CHANGED);
 
@@ -39,7 +39,6 @@ public class TwelveActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
         // 取消注册广播接收器
         unregisterReceiver(timeChangeReceiver);
     }

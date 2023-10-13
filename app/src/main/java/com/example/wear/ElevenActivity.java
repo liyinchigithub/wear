@@ -12,7 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wear.adapter.ElevenActivityButtonAdapter;
+import com.example.wear.Adapter.ElevenActivityButtonAdapter;
 import com.example.wear.databinding.ActivityElevenBinding;
 
 import java.util.ArrayList;

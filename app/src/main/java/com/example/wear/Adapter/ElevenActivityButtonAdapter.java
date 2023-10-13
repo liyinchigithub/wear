@@ -1,4 +1,4 @@
-package com.example.wear.adapter;
+package com.example.wear.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

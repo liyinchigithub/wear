@@ -35,9 +35,9 @@
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
-         <!-- 广播 -->
+         <!-- 注册广播 -->
         <receiver
-            android:name=".broadcast.TimeChangeReceiver"
+            android:name=".Broadcast.TimeChangeReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -46,13 +46,22 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".broadcast.KeyRecordBroadcastReceiver"
+            android:name=".Broadcast.KeyRecordBroadcastReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
-        </receiver> <!-- 数据共享 -->
+        </receiver>
+        <receiver
+            android:name=".Broadcast.CustomerReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.wear.ACTION_CUSTOM_ACTION" />
+            </intent-filter>
+        </receiver>
+        <!-- 数据共享 -->
         <provider
             android:name=".Provider.Provider"
             android:authorities="com.example.wear.Provider"
