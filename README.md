@@ -35,3 +35,21 @@ SDK >=29
 ./gradlew assembleDebug
 ```    
 
+
+# 启动sdk 模拟器
+
+```
+cd /Users/liyinchi/TestTool/android-sdk-macosx/emulator/emulator -avd Wear_OS_Square_API_28
+
+# Wear_OS_Square_API_28 模拟器名称
+# sdk路径local.properties文件中查看
+```
+
+冷启动
+当提示avd删除.lock文件时，把模拟器启动模式改为cold boot
+
+快启动
+每次启动没有再进入系统，直接进入应用
+
+
+

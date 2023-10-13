@@ -24,18 +24,21 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
+        <receiver
+            android:name=".BatterReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
         <uses-library
             android:name="com.google.android.wearable"
             android:required="true" />
-
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
         <meta-data
             android:name="com.google.android.wearable.standalone"
-            android:value="true" />
-         <!-- 注册广播 -->
+            android:value="true" /> <!-- 注册广播 -->
         <receiver
             android:name=".Broadcast.TimeChangeReceiver"
             android:enabled="true"
@@ -61,6 +64,7 @@
                 <action android:name="com.example.wear.ACTION_CUSTOM_ACTION" />
             </intent-filter>
         </receiver>
+
         <!-- 数据共享 -->
         <provider
             android:name=".Provider.Provider"
@@ -199,21 +203,15 @@
         <activity
             android:name=".TwentyNineActivity"
             android:exported="true"
-            android:label="@string/title_activity_twenty_nine">
-        </activity>
-        <!-- 声明 第三十页 -->
+            android:label="@string/title_activity_twenty_nine"></activity> <!-- 声明 第三十页 -->
         <activity
             android:name=".ThirtyActivity"
             android:exported="true"
-            android:label="@string/title_activity_thirty">
-        </activity>
-        <!-- 声明 第三十一页 -->
+            android:label="@string/title_activity_thirty"></activity> <!-- 声明 第三十一页 -->
         <activity
             android:name=".ThirtyOneActivity"
             android:exported="true"
-            android:label="@string/title_activity_thirty_one">
-        </activity>
-        <!-- 声明 第三十二页 -->
+            android:label="@string/title_activity_thirty_one"></activity> <!-- 声明 第三十二页 -->
         <!-- 服务组件 -->
         <service
             android:name=".service.NetworkService"

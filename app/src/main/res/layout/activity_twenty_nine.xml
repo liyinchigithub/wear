@@ -55,10 +55,22 @@
                     android:text="发送"
                     android:onClick="sendDynamicBroadcast"/>
 
+                <!-- 动态注册广播 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="动态注册广播-电池"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/dyBatteryTextView" />
+
+                <Button
+                    android:id="@+id/dyRegisterBatteryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="发送"
+                    android:onClick="sendDynamicBroadcastBattery"/>
             </LinearLayout>
-
         </ScrollView>
-
     </LinearLayout>
-
 </androidx.wear.widget.BoxInsetLayout>
