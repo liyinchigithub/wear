@@ -11,6 +11,9 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
+/**
+ * 录音广播接收器
+ * */
 public class KeyRecordBroadcastReceiver extends BroadcastReceiver {
     private static final String TAG = "KeyRecordBroadcastReceiver";
     private int clickCount = 0;//  记录点击次数

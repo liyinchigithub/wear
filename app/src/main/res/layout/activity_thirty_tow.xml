@@ -18,7 +18,7 @@
                 android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="31"
+                android:text="32"
                 android:textColor="@color/colorPrimary"
                 android:gravity="center"
                 android:textSize="30sp"/>

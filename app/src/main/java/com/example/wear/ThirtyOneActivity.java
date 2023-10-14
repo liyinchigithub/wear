@@ -19,4 +19,21 @@ public class ThirtyOneActivity extends Activity {
         // 启动BatteryService
         startService(new Intent(this, BatteryService.class));
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // 页面销毁即停止BatteryService，如果想要退出页面仍要显示BatteryService，则注释掉此行
+        stopService(new Intent(this, BatteryService.class));
+    }
 }

@@ -7,7 +7,7 @@ import android.util.Log;
 
 
 /**
- *  广播接收者
+ *  静态广播接收者
  *  BroadcastReceiver的实现类
  * */
 public class CustomerReceiver extends BroadcastReceiver {
