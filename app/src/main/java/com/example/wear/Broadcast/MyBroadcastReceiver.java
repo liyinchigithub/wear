@@ -18,9 +18,9 @@ public class MyBroadcastReceiver  extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         //  获取
         String data = intent.getStringExtra("key");
-
         // 创建一个新的Intent
         Intent broadcastIntent = new Intent(ActionUtils.ACTION_BROADCAST_TO_ACTIVITY_FLAG);
+        // 要发送的数据
         broadcastIntent.putExtra("key", data);
 
         // 发送本地广播

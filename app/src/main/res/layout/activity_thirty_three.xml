@@ -8,17 +8,21 @@
     tools:context=".ThirtyThreeActivity"
     tools:deviceIds="wear">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding"
-        app:layout_boxedEdges="all">
-
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/hello_world" />
-
-    </FrameLayout>
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="33"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:textSize="30sp"/>
+        </ScrollView>
+    </LinearLayout>
 </androidx.wear.widget.BoxInsetLayout>
