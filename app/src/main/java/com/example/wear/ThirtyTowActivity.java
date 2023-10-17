@@ -16,7 +16,6 @@ import com.example.wear.Broadcast.ActionUtils;
 import com.example.wear.databinding.ActivityThirtyTowBinding;
 
 public class ThirtyTowActivity extends Activity {
-
     private TextView mTextView;
     private ActivityThirtyTowBinding binding;
     private BroadcastReceiver receiver;

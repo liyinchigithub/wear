@@ -13,10 +13,11 @@ android {
     defaultConfig {
         applicationId "com.example.wear"// 指定应用的包名
         minSdk 28   // 指定应用的最小支持的Android SDK版本
-        targetSdk 33 // 指定应用的目标Android SDK版本
+        targetSdk 30 // 指定应用的目标Android SDK版本
         versionCode 1   // 指定应用的版本号
         versionName "1.0" // 指定应用的版本名称
 //        buildToolsRevision '30.0.3' // 指定构建工具版本
+
 
     }
     // 项目的构建类型
@@ -49,6 +50,7 @@ android {
         viewBinding true
     }
 }
+
 // 项目的依赖。
 // 这些依赖包括你的项目需要的所有库，如Android支持库、测试库等。
 // 例如，implementation 'androidx.appcompat:appcompat:1.1.0'表示你的项目依赖于appcompat库的1.1.0版本
@@ -67,6 +69,8 @@ dependencies {
     implementation 'androidx.palette:palette-ktx:1.0.0'
     implementation 'androidx.wear:wear:1.1.0'
     implementation 'com.google.android.gms:play-services-location:18.0.0'
+//    implementation 'com.amap.api:3dmap:9.8.2'
+
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
 //    debugImplementation "io.github.didi.dokit:dokitx:3.5.0"
 //    releaseImplementation "io.github.didi.dokit:dokitx-no-op:3.5.0"
