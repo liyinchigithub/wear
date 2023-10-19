@@ -21,6 +21,9 @@ import com.google.android.gms.tasks.OnSuccessListener;
 
 import com.example.wear.databinding.ActivityThirdBinding;
 
+/**
+ * 定位
+ * */
 public class ThirdActivity extends Activity {
 
     private TextView mTextView;

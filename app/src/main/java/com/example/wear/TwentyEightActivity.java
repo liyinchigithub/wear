@@ -10,6 +10,9 @@ import com.example.wear.databinding.ActivityTwentyEightBinding;
 
 import dao.MyObject;
 
+/**
+ * activity 通信传参（接收其他页面传过来的参数）
+ * */
 public class TwentyEightActivity extends Activity {
 
     private TextView mTextView;

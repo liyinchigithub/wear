@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.example.wear.databinding.ActivityEightBinding;
 import com.example.wear.service.MediaPlayerService;
 
+/**
+ * 音乐播放
+ * */
 public class EightActivity extends Activity {
 
     private TextView mTextView;

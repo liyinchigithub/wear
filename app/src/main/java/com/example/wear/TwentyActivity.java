@@ -12,7 +12,10 @@ import android.widget.TextView;
 
 import com.example.wear.databinding.ActivityTwentyBinding;
 
-// 使压力传感器
+/**
+ * 传感器
+ * 使压力传感器
+ * */
 public class TwentyActivity extends Activity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor pressure;

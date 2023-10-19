@@ -16,7 +16,10 @@ import androidx.core.app.ActivityCompat;
 
 import com.example.wear.databinding.ActivitySeventeenBinding;
 
-// 加速度传感器
+/**
+ * 传感器
+ * 加速度传感器
+ * */
 public class EighteenActivity extends WearableActivity {
 
     private static final String TAG = "EighteenActivity";

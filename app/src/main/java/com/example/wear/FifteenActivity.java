@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 import com.example.wear.databinding.ActivityFifteenBinding;
 
+/**
+ * 登录
+ * */
 public class FifteenActivity extends Activity {
 
     private TextView mTextView;

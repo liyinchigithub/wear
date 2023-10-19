@@ -9,6 +9,10 @@ import android.widget.TextView;
 import com.example.wear.Broadcast.TimeChangeReceiver;
 import com.example.wear.databinding.ActivityTwelveBinding;
 
+/**
+ * 广播
+ * 系统广播-时间改变
+ * */
 public class TwelveActivity extends Activity {
 
     private TextView mTextView;

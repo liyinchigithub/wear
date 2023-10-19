@@ -17,6 +17,11 @@ import com.example.wear.service.BatteryService;
 
 import java.util.ArrayList;
 
+/**
+ * 广播
+ * 系统广播
+ * 自定义广播
+ * */
 public class TwentyNineActivity extends Activity {
 
     private TextView mTextView;

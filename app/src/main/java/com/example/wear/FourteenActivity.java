@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 import com.example.wear.databinding.ActivityFourteenBinding;
 
+/**
+ * 相机相册14
+ * */
 public class FourteenActivity extends Activity {
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;//

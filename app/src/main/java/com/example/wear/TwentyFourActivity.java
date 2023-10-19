@@ -11,7 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 
 import com.example.wear.Broadcast.KeyRecordBroadcastReceiver;
-
+/**
+ * 录音
+ * */
 public class TwentyFourActivity extends Activity {
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
     private boolean permissionToRecordAccepted = false;

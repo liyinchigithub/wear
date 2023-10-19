@@ -8,6 +8,12 @@ import android.widget.TextView;
 
 import com.example.wear.databinding.ActivityThirtyOneBinding;
 import com.example.wear.service.BatteryService;
+
+
+
+/**
+ * Activity 启动Service、 停止启动Service
+ * */
 public class ThirtyOneActivity extends Activity {
     private TextView mTextView;
     private ActivityThirtyOneBinding binding;

@@ -12,6 +12,8 @@ import com.example.wear.databinding.ActivityThirtyThreeBinding;
 
 import java.io.File;
 
+
+
 public class ThirtyThreeActivity extends Activity {
 
     private TextView mTextView;

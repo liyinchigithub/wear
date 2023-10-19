@@ -17,7 +17,9 @@ import android.widget.Toast;
 import androidx.core.app.NotificationCompat;
 
 import com.example.wear.databinding.ActivityTenBinding;
-
+/**
+ * 发送通知
+ * */
 public class TenActivity extends Activity {
 
     private TextView mTextView;

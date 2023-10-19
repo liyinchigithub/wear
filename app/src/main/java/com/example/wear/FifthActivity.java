@@ -12,6 +12,9 @@ import com.example.wear.databinding.ActivityFifthBinding;
 import java.util.ArrayList;
 import java.util.Locale;
 
+/**
+ * 语音输入
+ * */
 public class FifthActivity extends Activity {
 
     private TextView mTextView;

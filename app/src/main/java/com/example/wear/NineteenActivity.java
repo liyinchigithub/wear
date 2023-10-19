@@ -17,7 +17,9 @@ import android.widget.Toast;
 import com.example.wear.databinding.ActivityNineteenBinding;
 
 import dao.DatabaseHelper;
-
+/**
+ * SQLite
+ * */
 public class NineteenActivity extends Activity {
 
     private EditText editTextCreateDatabase;

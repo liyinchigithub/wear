@@ -12,7 +12,11 @@ import android.widget.TextView;
 
 import com.example.wear.databinding.ActivityTwentyBinding;
 
-// 使用光、压力和温度传感器
+//
+/**
+ *  传感器
+ *  使用光、压力和温度传感器
+ * */
 public class TwentyOneActivity extends Activity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor light;

@@ -17,6 +17,9 @@ import com.example.wear.databinding.ActivityElevenBinding;
 
 import java.util.ArrayList;
 
+/**
+ * 自定义顶栏、底栏、dialog弹窗
+ * */
 public class ElevenActivity extends AppCompatActivity {
 
     private ActivityElevenBinding binding;

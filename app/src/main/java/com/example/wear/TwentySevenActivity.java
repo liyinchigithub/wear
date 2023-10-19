@@ -9,6 +9,9 @@ import com.example.wear.databinding.ActivityTwentySevenBinding;
 
 import dao.MyObject;
 
+/**
+ *  activity 通信传参
+ * */
 public class TwentySevenActivity extends Activity {
 
     private TextView mTextView;

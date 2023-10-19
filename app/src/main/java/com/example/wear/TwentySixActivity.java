@@ -12,7 +12,9 @@ import android.widget.TextView;
 
 import com.example.wear.databinding.ActivityTwentySixBinding;
 import com.example.wear.service.NetworkService;
-
+/**
+ *  activity 启动Service、绑定Service
+ * */
 public class TwentySixActivity extends Activity {
 
     private TextView mTextView;

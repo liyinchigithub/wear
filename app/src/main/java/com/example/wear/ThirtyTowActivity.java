@@ -15,6 +15,10 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.example.wear.Broadcast.ActionUtils;
 import com.example.wear.databinding.ActivityThirtyTowBinding;
 
+/**
+ * 广播
+ * 自定义广播-activity接收广播的传参
+ * */
 public class ThirtyTowActivity extends Activity {
     private TextView mTextView;
     private ActivityThirtyTowBinding binding;
